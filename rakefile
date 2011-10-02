@@ -1,0 +1,13 @@
+task :default => [:book]
+
+desc "build a book"
+task :book => :build do
+  sh "wkhtmltopdf --page-width 10.8cm --page-height 17.45cm --margin-left 0.635cm --margin-right 0.635cm --margin-top 0.635cm --margin-bottom 0.635cm --user-style-sheet stylesheets/book.css  _site/book.html book.pdf"
+end
+
+desc "clean and build site using Jekyll"
+task :build do
+  sh "rm -rf _site/"
+  sh "jekyll"
+end
+

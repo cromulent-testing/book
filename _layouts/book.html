@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="stylesheets/book.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="stylesheets/book.css" media="media" rel="stylesheet" type="text/css"/>
+  </head>
+<body>
+  
+  <div class="section">
+    <h1>Concepts</h1>
+    <ul>
+      {% for post in site.posts reversed %}
+        {% if post.section == 'concepts' %}
+          <li>{{ post.title }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="section">
+    <h1>Automation</h1>
+    <ul>
+      {% for post in site.posts reversed %}
+        {% if post.section == 'automation' %}
+          <li>{{ post.title }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="section">
+    <h1>Guidance</h1>
+    <ul>
+      {% for post in site.posts reversed %}
+        {% if post.section == 'guidance' %}
+          <li>{{ post.title }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="section">
+    <h1>People</h1>
+    <ul>
+      {% for post in site.posts reversed %}
+        {% if post.section == 'people' %}
+          <li>{{ post.title }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% for post in site.posts reversed %}
+    <div class="article">
+      <p>{{ post.title }}</p>
+      <p>{{ post.content }}</p>
+    </div>
+  {% endfor %}
+</body>
+</html>

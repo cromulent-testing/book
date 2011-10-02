@@ -1,0 +1,17 @@
+<p>We were building a shiny new system that relied on data from a poorly understood legacy monster. Assumptions about this data were baked into our system. These unchallenged assumptions turned out to be wrong. Our shiny new system was no longer so shiny.</p>
+
+<p>The wider the belief in the assumption, the more it’s en-grained in the business, the greater the need for it to be tested.</p>
+
+<p>Why trust when you can know?</p>
+
+<p>An example Mule test (<em>it&#8217;s blogging by example!</em>)</p>
+
+<p>Start with the assumption: <em>&#8220;All products must have a category&#8221;</em> Find a way to challenge or validate it. In this case we would run a simple query against production data:</p>
+<div class='highlight'><pre>    <span class='k'>SELECT</span> <span class='o'>*</span> <span class='k'>FROM</span> <span class='n'>products</span> <span class='k'>WHERE</span> <span class='n'>category</span> <span class='k'>IS</span> <span class='k'>NULL</span>
+</pre>
+</div>
+<p>If the assumption holds true then rest easy. If it turns out to be false, congratulations you have just prevented a major bug. Share it with the team and update your old assumption to include the new facts. In this example <em>&#8220;A product does not require a category&#8221;</em>.</p>
+
+<p>Mule testing has limits. It only helps you test assumptions that you know about. If the magic combination of data that breaks your assumptions doesn’t yet exist, it won’t fail. It only works with access to the latest production data.</p>
+
+<p>Why the name mule testing? Because some people got the wrong idea when we called it ass testing.</p>

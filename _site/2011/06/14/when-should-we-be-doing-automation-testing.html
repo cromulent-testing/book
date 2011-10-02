@@ -1,0 +1,9 @@
+<p>Automated tests, that are written <strong>before</strong> the code; capture the intention of the code, inform design decisions, provide rapid feedback and let us know when we are done. All of this gets us thinking about testing and ensuring that our code can be automated.</p>
+
+<p>One view of test automation is to write it <strong>after</strong> the system code has been written so the automation has to cope with less change. We&#8217;ve found this view doesn&#8217;t hold up in practice, firstly we spend a lot of time reverse engineering the code to automate it. Secondly, if the code is changing then this is when we need test automation the most to provide us with a safety net.</p>
+
+<p>Automated tests that are written <strong>after</strong> the code do not directly inform the design nor do they provide rapid feedback. When writing automated tests in this way we need to ask ourselves; why are we taking this approach?</p>
+
+<p>If we are doing it to provide test coverage or run in the CI build then we are coming to the party late. Without visibility into what automation already exists we could be duplicating test effort. If these tests will help us build a better product then they should be written <strong>before</strong> the code.</p>
+
+<p>If we are using automation to do exploratory testing and we intend to throw the automation code away afterwards then we can write the tests <strong>after</strong>. Not all automation needs to be kept it just has to help us explore.</p>

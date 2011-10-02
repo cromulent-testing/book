@@ -1,0 +1,3 @@
+pygments: true
+exclude: .idea, nbproject, rakefile, Gemfile, Gemfile.lock
+url: http://cromulent-testing.com/

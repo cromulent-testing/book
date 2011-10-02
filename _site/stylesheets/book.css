@@ -1,0 +1,31 @@
+body
+{
+  width: 4.25in;
+  height: 6.87in;
+  margin: 0;
+  padding: 0.635in;
+  font-size: 12pt;
+}
+
+div.section
+{
+  page-break-before: always;
+}
+
+div.section h1
+{
+  page-break-after: always;
+}
+
+div.section ul
+{
+  
+}
+
+div.article
+{
+  margin: 0;
+  padding: 0;
+  page-break-before: always;
+  min-height: 12in;
+}

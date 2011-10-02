@@ -1,0 +1,3 @@
+book=build a book
+build=clean and build site using Jekyll
+default=

@@ -13,6 +13,7 @@ tags:
 - asimov
 - robots
 published: yes
+section: concepts
 ---
 Everything that follows is a result of what you see here.
 

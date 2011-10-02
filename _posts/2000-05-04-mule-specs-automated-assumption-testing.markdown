@@ -10,6 +10,7 @@ tags:
 - ruby
 - mule testing
 published: yes
+section: concepts
 ---
 In our last post we talked about [mule testing](http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html). Assumptions need automation because they’re the foundation our systems are built upon; they can change at anytime. Mule specs are a way to automate mule tests.
 

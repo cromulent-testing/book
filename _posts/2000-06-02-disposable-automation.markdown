@@ -9,6 +9,7 @@ tags:
 - exploratory testing
 - exploratory automation
 published: yes
+section: automation
 ---
 In our experience, testers have an unhealthy attachment to automated tests. We’re going to talk about times when throwaway automation is really helpful.
 

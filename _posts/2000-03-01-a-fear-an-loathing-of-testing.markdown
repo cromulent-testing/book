@@ -9,6 +9,7 @@ tags:
 - waterfall
 - waterfail
 published: yes
+section: intro
 ---
 
 **Ash**: *We were somewhere around the waterfall, on the edge of the software lifecycle, when the tests began to take hold. I remember saying something like:*

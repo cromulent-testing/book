@@ -6,56 +6,143 @@
     <link href="stylesheets/book.css" media="media" rel="stylesheet" type="text/css"/>
   </head>
 <body>
+
+  <!--
+  [undefined front matter]
+
+  [blank]                 [a fear and loathing of testing]
+
+  [section header]        [section toc]
+  [article]               [article or blank]
+  [article]               [article or blank]
+  [article]               [article or blank]
+  [article]               [article or blank]
+
+  -->
+
+  <div class="section intro">
+    {% for post in site.posts reversed %}
+      {% if post.section == 'intro' %}
+        <div class="article">
+          {{ post.content }}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
   
-  <div class="section">
+  <div class="section concept">
     <h1>Concepts</h1>
-    <ul>
+    <div class="section-toc">
+      <ul>
+        {% for post in site.posts reversed %}
+          {% if post.section == 'concepts' %}
+            <li>{{ post.title }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="articles">
       {% for post in site.posts reversed %}
         {% if post.section == 'concepts' %}
-          <li>{{ post.title }}</li>
+          <div class="article">
+            <p>{{ post.title }}</p>
+            <p>{{ post.content }}</p>
+          </div>
         {% endif %}
       {% endfor %}
-    </ul>
+    </div>
   </div>
 
-  <div class="section">
+  <div class="section automation">
     <h1>Automation</h1>
-    <ul>
+    <div class="section-toc">
+      <ul>
+        {% for post in site.posts reversed %}
+          {% if post.section == 'automation' %}
+            <li>{{ post.title }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="articles">
       {% for post in site.posts reversed %}
         {% if post.section == 'automation' %}
-          <li>{{ post.title }}</li>
+          <div class="article">
+            <p>{{ post.title }}</p>
+            <p>{{ post.content }}</p>
+          </div>
         {% endif %}
       {% endfor %}
-    </ul>
+    </div>
   </div>
 
-  <div class="section">
+  <div class="section guidance">
     <h1>Guidance</h1>
-    <ul>
+    <div class="section-toc">
+      <ul>
+        {% for post in site.posts reversed %}
+          {% if post.section == 'guidance' %}
+            <li>{{ post.title }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="articles">
       {% for post in site.posts reversed %}
         {% if post.section == 'guidance' %}
-          <li>{{ post.title }}</li>
+          <div class="article">
+            <p>{{ post.title }}</p>
+            <p>{{ post.content }}</p>
+          </div>
         {% endif %}
       {% endfor %}
-    </ul>
-  </div>
-
-  <div class="section">
-    <h1>People</h1>
-    <ul>
-      {% for post in site.posts reversed %}
-        {% if post.section == 'people' %}
-          <li>{{ post.title }}</li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-
-  {% for post in site.posts reversed %}
-    <div class="article">
-      <p>{{ post.title }}</p>
-      <p>{{ post.content }}</p>
     </div>
-  {% endfor %}
+  </div>
+
+  <div class="section people">
+    <h1>People</h1>
+    <div class="section-toc">
+      <ul>
+        {% for post in site.posts reversed %}
+          {% if post.section == 'self-care' %}
+            <li>{{ post.title }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="articles">
+      {% for post in site.posts reversed %}
+        {% if post.section == 'self-care' %}
+          <div class="article">
+            <p>{{ post.title }}</p>
+            <p>{{ post.content }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="section anecdotes">
+    <h1>Stories</h1>
+    <div class="section-toc">
+      <ul>
+        {% for post in site.posts reversed %}
+          {% if post.section == 'anecdotes' %}
+            <li>{{ post.title }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="articles">
+      {% for post in site.posts reversed %}
+        {% if post.section == 'anecdotes' %}
+          <div class="article">
+            <p>{{ post.title }}</p>
+            <p>{{ post.content }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 </body>
 </html>

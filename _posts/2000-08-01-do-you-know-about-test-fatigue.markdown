@@ -9,6 +9,7 @@ tags:
 - pressure
 - burn out
 published: yes
+section: self-care
 ---
 > Fatigue is a normal result of working, mental stress, overstimulation and understimulation, jet lag or active recreation, depression, and also boredom, disease and lack of sleep.\[[1]\]
 We could rewrite the above quote to be:

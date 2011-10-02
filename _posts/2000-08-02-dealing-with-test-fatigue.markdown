@@ -9,6 +9,7 @@ tags:
 - pressure
 - burn out
 published: yes
+section: self-care
 ---
 Here are the problems we raised in our [last post](http://cromulent-testing.com/2011/07/14/do-you-know-about-test-fatigue.html) and ways we deal with them.
 

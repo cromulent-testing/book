@@ -7,6 +7,7 @@ tags:
 - exploratory
 - test driven
 published: yes
+section: automation
 ---
 Automated tests, that are written **before** the code; capture the intention of the code, inform design decisions, provide rapid feedback and let us know when we are done. All of this gets us thinking about testing and ensuring that our code can be automated.
 

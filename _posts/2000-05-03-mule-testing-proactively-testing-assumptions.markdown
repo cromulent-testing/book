@@ -5,6 +5,7 @@ tags:
 - testing
 
 published: yes
+section: concepts
 ---
 We were building a shiny new system that relied on data from a poorly understood legacy monster. Assumptions about this data were baked into our system. These unchallenged assumptions turned out to be wrong. Our shiny new system was no longer so shiny.
 

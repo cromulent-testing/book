@@ -10,6 +10,7 @@ tags:
 - months
 - rounding
 published: yes
+section: concepts
 ---
 Many bugs can be prevented by challenging assumptions. Challenging the assumptions every one holds as well as paying attention to the seemingly small ones, will yield great results.
 

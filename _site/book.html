@@ -6,159 +6,25 @@
     <link href="stylesheets/book.css" media="media" rel="stylesheet" type="text/css"/>
   </head>
 <body>
-  
-  <div class="section">
-    <h1>Concepts</h1>
-    <ul>
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ul>
-  </div>
 
-  <div class="section">
-    <h1>Automation</h1>
-    <ul>
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ul>
-  </div>
+  <!--
+  [undefined front matter]
 
-  <div class="section">
-    <h1>Guidance</h1>
-    <ul>
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ul>
-  </div>
+  [blank]                 [a fear and loathing of testing]
 
-  <div class="section">
-    <h1>People</h1>
-    <ul>
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ul>
-  </div>
+  [section header]        [section toc]
+  [article]               [article or blank]
+  [article]               [article or blank]
+  [article]               [article or blank]
+  [article]               [article or blank]
 
-  
-    <div class="article">
-      <p>a fear and loathing of testing</p>
-      <p><p><strong>Ash</strong>: <em>We were somewhere around the waterfall, on the edge of the software lifecycle, when the tests began to take hold. I remember saying something like:</em></p>
+  -->
+
+  <div class="section intro">
+    
+      
+        <div class="article">
+          <p><strong>Ash</strong>: <em>We were somewhere around the waterfall, on the edge of the software lifecycle, when the tests began to take hold. I remember saying something like:</em></p>
 <br />
 <p>I feel a bit lightheaded. Maybe you should drive.</p>
 <br />
@@ -170,252 +36,97 @@
 <br />
 <p><strong>Ash</strong>: Hm? Never mind. It&#8217;s your turn to test.</p>
 <br />
-<p><strong>Ash</strong>: <em>No point in mentioning these bugs, I thought. Poor bastard will see them soon enough.</em></p></p>
-    </div>
+<p><strong>Ash</strong>: <em>No point in mentioning these bugs, I thought. Poor bastard will see them soon enough.</em></p>
+        </div>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
   
-    <div class="article">
-      <p>when should we be doing automated testing?</p>
-      <p><p>Automated tests, that are written <strong>before</strong> the code; capture the intention of the code, inform design decisions, provide rapid feedback and let us know when we are done. All of this gets us thinking about testing and ensuring that our code can be automated.</p>
-
-<p>One view of test automation is to write it <strong>after</strong> the system code has been written so the automation has to cope with less change. We&#8217;ve found this view doesn&#8217;t hold up in practice, firstly we spend a lot of time reverse engineering the code to automate it. Secondly, if the code is changing then this is when we need test automation the most to provide us with a safety net.</p>
-
-<p>Automated tests that are written <strong>after</strong> the code do not directly inform the design nor do they provide rapid feedback. When writing automated tests in this way we need to ask ourselves; why are we taking this approach?</p>
-
-<p>If we are doing it to provide test coverage or run in the CI build then we are coming to the party late. Without visibility into what automation already exists we could be duplicating test effort. If these tests will help us build a better product then they should be written <strong>before</strong> the code.</p>
-
-<p>If we are using automation to do exploratory testing and we intend to throw the automation code away afterwards then we can write the tests <strong>after</strong>. Not all automation needs to be kept it just has to help us explore.</p></p>
+  <div class="section concept">
+    <h1>Concepts</h1>
+    <div class="section-toc">
+      <ul>
+        
+          
+        
+          
+            <li>challenging assumptions</li>
+          
+        
+          
+            <li>Ask better questions - Listen!</li>
+          
+        
+          
+            <li>Mule Testing - proactively testing assumptions</li>
+          
+        
+          
+            <li>Mule Specs - automated assumption testing</li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
     </div>
-  
-    <div class="article">
-      <p>what we do in the case of an automation backlog?</p>
-      <p><p>The behaviour people have when they are behind is often more damaging then being behind. We&#8217;re going to focus on a couple of ways we can climb out of this hole.</p>
-
-<p>Firstly, get the team to help us catch up!</p>
-
-<p>Moving the culture to a test driven approach will fix the backlog and prevent it from happening. As changing culture can be long term, we can use <a href='http://leanandkanban.wordpress.com/2009/05/14/wip-and-limits/'>WIP</a> (Work In Progress) limits; an easily implemented tool from Lean, to make the team aware of the problem and to move in the right direction.</p>
-
-<p>For example, once the tester&#8217;s WIP limit is reached, before anyone can start more work, they need to help the tester finish something. Get the team to stop starting and to start finishing. Optimizing the team as a whole increases work flow more than optimizing individual components.</p>
-
-<p>The second tactic is damage control, and will stop us chasing our tails until the end of time. This approach assumes a team that is unwilling/unable to support the testers. For new work, we prioritise based on risk; covering the low priority work with mostly manual testing to stop the backlog from growing. To deal with the existing backlog, we write smoke tests to give us thin coverage and confidence over the functionality, filling in the gaps based on priority, balanced with the new work coming in.</p>
-
-<p>More on information on WIP limits: <a href='http://leanandkanban.wordpress.com/2009/05/14/wip-and-limits/'>http://leanandkanban.wordpress.com/2009/05/14/wip-and-limits/</a></p></p>
-    </div>
-  
-    <div class="article">
-      <p>testing integration projects</p>
-      <p><p>When problems arise (often) in integration projects (all of them) a lot of time and energy is spent arguing who&#8217;s at fault. This is as about as useful as arguing whose side of the boat has a leak.</p>
-
-<p>It&#8217;s common for Team Upstream and Team Downstream to test their systems in isolation. However, the problems lurk in international waters, between teams. We must test the integration. Integration testing is like voting, do it early and do it often.</p>
-
-<p>Traditionally, groups are brought together through marriage. In lieu of this, we&#8217;ve had a lot of success sending emissaries to work with other teams. This doesn&#8217;t mean endless meetings. It means joining forces and working together, reducing the us and them mentality.</p>
-
-<p>We may be told that our responsibility ends with our system boundary, stay out of international waters. We may be told that it will all just work if we build it to spec. The reality is that we need to make sure the entire system works across all teams.</p>
-
-<p>Current thinking is that our brains are geared towards living in small family groups, in competition with others. This distorts our view of other teams, causing us to presume they are either malicious or incompetent. We even dehumanise them, giving them nicknames like Team Downstream, instead of recognising them as fellow people doing the same job as us.</p>
-
-<p>As the elders say: you must test the integration (and take these mushrooms!)</p></p>
-    </div>
-  
-    <div class="article">
-      <p>Disposable Automation</p>
-      <p><p>In our experience, testers have an unhealthy attachment to automated tests. We’re going to talk about times when throwaway automation is really helpful.</p>
-
-<h3 id='record_and_playback'>Record and playback</h3>
-
-<p>Sick and tired of clicking through page after page to find what you want to test? Record your path, run it, and test what actually matters. Record and playback is quick and easy. The code it creates will make your eyes bleed which doesn’t matter as long you dump it as soon as you’re done with it.</p>
-
-<h3 id='exploratory_automation'>Exploratory Automation</h3>
-
-<p>Sometimes you need to test things that can’t easily be done manually. We were exploring a bug lurking deep within a server and found ourselves manually crafting HTTP headers in telnet. We realised it’s a lot easier to do this in code. So we did. We found the bug and threw the automation away.</p>
-
-<h3 id='permutations_and_combinations'>Permutations and Combinations</h3>
-
-<p>There’s an adage that you can’t test everything. Sometimes, your tester senses tell you to cover a part of the system thoroughly. This can be done with a script that generates the various combinations. Run it over night and don’t leave your number.</p>
-
-<p>Automation you decide to keep, you decide to maintain and “The things you own, end up owning you.” Tyler Durden</p></p>
-    </div>
-  
-    <div class="article">
-      <p>Do you know about test fatigue?</p>
-      <p><blockquote>
-<p>Fatigue is a normal result of working, mental stress, overstimulation and understimulation, jet lag or active recreation, depression, and also boredom, disease and lack of sleep.[<a href='http://en.wikipedia.org/wiki/Fatigue_(medical)'>1</a>]</p>
-</blockquote>
-
-<p>We could rewrite the above quote to be:</p>
-
-<p>Test fatigue is a normal result of testing, delivery pressures, thrashing, uninteresting work, disenfranchisement, mechanical work, bad practices and working overtime.</p>
-
-<p>What’s wrong with that?</p>
-
-<blockquote>
-<p>&#8230;mental fatigue, in turn, can manifest itself both as somnolence (decreased wakefulness), or just as a general decrease of attention, not necessarily including sleepiness. Decreased attention is known as ego depletion and occurs when the limited &#8216;self regulatory capacity&#8217; is depleted. It may also be described as a more or less decreased level of consciousness. In any case, this can be dangerous when performing tasks that require constant concentration, such as driving a vehicle&#8230; [or testing][<a href='http://en.wikipedia.org/wiki/Fatigue_(medical)'>1</a>]</p>
-</blockquote>
-
-<p>This is a big topic, we have a lot more to say&#8230;stay tuned.</p>
-
-<p>[1]: <a href='http://en.wikipedia.org/wiki/Fatigue_(medical'>http://en.wikipedia.org/wiki/Fatigue_(medical)</a></p></p>
-    </div>
-  
-    <div class="article">
-      <p>Dealing with test fatigue</p>
-      <p><p>Here are the problems we raised in our <a href='http://cromulent-testing.com/2011/07/14/do-you-know-about-test-fatigue.html'>last post</a> and ways we deal with them.</p>
-
-<p><strong>working overtime</strong> - You can’t test tired. If you’re going to be working overtime for several hours, have a break. Take time away from the project and go out for dinner, like a second lunch. Adjust the workplace to your style, watch <a href='http://www.youtube.com/watch?v=oHg5SJYRHA0'>YouTube</a> together and take frequent communal breaks.</p>
-
-<p><strong>delivery pressures</strong> - The more pressure the team is under, the more likely they are to make mistakes and the more you need to test. <a href='http://bit.ly/lOw9RM'>DON’T PANIC.</a> The less time you have the more you need to get it right the first time.</p>
-
-<p><strong>thrashing</strong> - Make a task list of what needs doing and divvy up the work. Stop people from interrupting (think: cone of silence) by politely explaining the urgency of what you’re working on. Remember, prioritisation! It’s normally better to finish some things than to partially complete lots of them.</p>
-
-<p><strong>uninteresting work</strong> - Spice up boring work by trying it in a new way. Any technique will do, invent your own or try something from your <a href='http://cromulent-testing.com'>favourite testing blog</a>. You can make work fun.</p>
-
-<p><strong>mechanical work</strong> - Automate it, computers love repetitive tasks. Even if you <a href='http://cromulent-testing.com/2011/07/05/disposable-automation.html'>dispose of it later</a>, you’re saving time. Delegate it to the development team, they love repetitive tasks.</p>
-
-<p><strong>bad practices &amp; disenfranchisement</strong> - Why are you doing this to yourself? Good testers are a rare breed. Other companies want you, we want you. If you can’t fix it, leave.</p></p>
-    </div>
-  
-    <div class="article">
-      <p>Testing in the deep end</p>
-      <p><p>Testers don’t have the luxury of a friendly group of people checking our work. Instead we get an angry mob with torches and pitch forks. We have to be honest about our limitations. It’s better you reveal them at the beginning, then get bitten by them at the end.</p>
-
-<p>As a rule: If you’re testing something that you can’t explain to someone else, then you probably don’t understand enough to effectively test it.</p>
-
-<p><strong>How do you approach testing something you don’t understand?</strong></p>
-
-<p>Find people who understand it better than you. Talk to them. If you can’t find real people, find Google. Regardless of your source, cross reference information and consider the author’s bias.</p>
-
-<p>There are fundamental techniques in testing that apply to most problems. Use them to explore, break it down and ask good questions. A common testing pattern is:</p>
-
-<p>Given <em>precondition</em> <br /> When <em>action</em> <br /> Then <em>expected thing</em> <br /></p>
-
-<p>Use this to think about what you need to set up, what you need to do and what results you should expect.</p>
-
-<p>Since we can’t know everything we’re always out of our depth to some extent. So <a href='http://bit.ly/lOw9RM'>don’t panic</a>. We have touched on three techniques to approach this problem: be honest, find someone who can help and fall back on your testing fundamentals.</p>
-
-<p>Sometimes the most intelligent thing you can say is “I don’t know”.</p></p>
-    </div>
-  
-    <div class="article">
-      <p>Chicken Little</p>
-      <p><p><em>Once upon a time there was a tiny chicken [tester] named Chicken Little. One day Chicken Little was scratching in the garden when an acorn fell on her head.</em> <em>&#8220;Oh,&#8221; cried Chicken Little, &#8220;The sky is falling! I must go tell the king [project manager].&#8221;</em></p>
-
-<p>It’s important to remember that this is a tester who really cares, we need to harness their passion. A panicked approach causes stress and real problems get lost in the noise. The tester will lose credibility, become marginalised and burnout.</p>
-
-<h2 id='harness_the_passion'>Harness the passion!</h2>
-
-<p>We need to work closely with these testers who are emotionally invested and vulnerable to criticism. How they arrived at this behaviour is irrelevant. Two things we’ve found that help are to teach them prioritisation and to value quality over quantity.</p>
-
-<h2 id='teach_them_to_prioritise'>Teach them to prioritise</h2>
-
-<p>Ask them to rank bugs in the order they would like them fixed. If they struggle, begin by ranking one critical and one trivial bug. This forces them to understand some bugs are more important than others. Once they’re all ranked, discuss at which point we could release with the remaining bugs.</p>
-
-<h2 id='value_them'>Value them</h2>
-
-<p>Publicly acknowledge them for finding the good bugs. Let them see their good bugs being fixed. Recognise their less important bugs and use their prioritisation to explain why they won&#8217;t be fixed.</p>
-
-<p>Teach them how to find the important bugs &#8230; coming soon</p>
-
-<p><em>&#8230;and they all lived happily ever after.</em></p></p>
-    </div>
-  
-    <div class="article">
-      <p>Validation and Verification</p>
-      <p><p>So what is the difference?</p>
-
-<p>It’s simple really, as long as you don’t read the plethora of arduous ISO and IEEE standards.</p>
-
-<p><strong>Verification</strong> is making sure what we built is working as we intended. This is acceptance testing, executable specifications and exploratory testing. These are testing fundamentals.</p>
-
-<p><strong>Validation</strong> is asking the question, did we build the right thing? There is little point in building a entirely configurable system if the owners have no want or need to.</p>
-
-<p>Our definitions, like most of the ones we’ve found, are defined in the past tense, which illustrates the real problem. Why wait to ask such important questions? It’s <a href='http://www.youtube.com/watch?v=eZeYVIWz99I'>Madness!</a></p>
-
-<p>Ask these questions early and often, then you’ll never have to bother with these definitions again:</p>
-
-<ul>
-<li>Are building the right thing?</li>
-
-<li>Is it working?</li>
-</ul>
-
-<p>Defining your testing as verification or validation is largely irrelevant in the grand scheme of things. Dissecting testing into small chunks is a useful way to learn new things, however in the real world, evolving your expertise to include new things, like user experience design, is more effective.</p></p>
-    </div>
-  
-    <div class="article">
-      <p>Mule Testing - proactively testing assumptions</p>
-      <p><p>We were building a shiny new system that relied on data from a poorly understood legacy monster. Assumptions about this data were baked into our system. These unchallenged assumptions turned out to be wrong. Our shiny new system was no longer so shiny.</p>
-
-<p>The wider the belief in the assumption, the more it’s en-grained in the business, the greater the need for it to be tested.</p>
-
-<p>Why trust when you can know?</p>
-
-<p>An example Mule test (<em>it&#8217;s blogging by example!</em>)</p>
-
-<p>Start with the assumption: <em>&#8220;All products must have a category&#8221;</em> Find a way to challenge or validate it. In this case we would run a simple query against production data:</p>
-<div class='highlight'><pre>    <span class='k'>SELECT</span> <span class='o'>*</span> <span class='k'>FROM</span> <span class='n'>products</span> <span class='k'>WHERE</span> <span class='n'>category</span> <span class='k'>IS</span> <span class='k'>NULL</span>
-</pre>
-</div>
-<p>If the assumption holds true then rest easy. If it turns out to be false, congratulations you have just prevented a major bug. Share it with the team and update your old assumption to include the new facts. In this example <em>&#8220;A product does not require a category&#8221;</em>.</p>
-
-<p>Mule testing has limits. It only helps you test assumptions that you know about. If the magic combination of data that breaks your assumptions doesn’t yet exist, it won’t fail. It only works with access to the latest production data.</p>
-
-<p>Why the name mule testing? Because some people got the wrong idea when we called it ass testing.</p></p>
-    </div>
-  
-    <div class="article">
-      <p>Mule Specs - automated assumption testing</p>
-      <p><p>In our last post we talked about <a href='http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html'>mule testing</a>. Assumptions need automation because they’re the foundation our systems are built upon; they can change at anytime. Mule specs are a way to automate mule tests.</p>
-
-<p>You can use any automated testing tool - the one your project already uses is probably fine. Unless it’s QTP. Below is the example from the <a href='http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html'>last post</a> in RSpec using the sequel gem.</p>
-<div class='highlight'><pre><span class='n'>describe</span> <span class='s1'>&#39;products&#39;</span> <span class='k'>do</span>
-  <span class='n'>it</span> <span class='s1'>&#39;do not require a category&#39;</span> <span class='k'>do</span>
-    <span class='n'>sql</span> <span class='o'>=</span> <span class='o'>&lt;&lt;-</span><span class='no'>SQL</span>
-<span class='sh'>      SELECT count(1) as row_count</span>
-<span class='sh'>      FROM product</span>
-<span class='sh'>      WHERE category IS NULL</span>
-<span class='no'>    SQL</span>
-
-    <span class='n'>at_least_one_row_exists</span> <span class='n'>sql</span>
-  <span class='k'>end</span>
-<span class='k'>end</span>
-</pre>
-</div>
-<p>We use two helper functions as we phrase our tests to expect either at least one result or no results.</p>
-<div class='highlight'><pre><span class='k'>def</span> <span class='nf'>at_least_one_row_exists</span> <span class='n'>sql</span>
-  <span class='no'>DB</span><span class='o'>[</span><span class='n'>sql</span><span class='o'>][</span><span class='ss'>:row_count</span><span class='o'>].</span><span class='n'>should</span> <span class='o'>!=</span> <span class='mi'>0</span>
-<span class='k'>end</span>
-
-<span class='k'>def</span> <span class='nf'>no_rows_exists</span> <span class='n'>sql</span>
-  <span class='no'>DB</span><span class='o'>[</span><span class='n'>sql</span><span class='o'>][</span><span class='ss'>:row_count</span><span class='o'>].</span><span class='n'>should</span> <span class='o'>==</span> <span class='mi'>0</span>
-<span class='k'>end</span>
-</pre>
-</div>
-<h3 id='getting_production_data'>Getting production data</h3>
-
-<p>Mule tests require prod data, the older and less realistic it is, the less certainty you have in your assumptions. Running Mule Specs on production data doesn’t mean running them on production, that’s a really bad idea. Copy the data elsewhere before execution. We arranged a sync from production every night and our Mule Specs run against it. So, when we arrive in the morning we know that as of yesterday, all our assumptions are still true.</p>
-
-<p>Mule specs give us more than just a way of verifying assumptions. Written well, with good reporting, you produce verified documentation that’s updated every night when the mules run. Get the entire team involved. Ensure the analysts note their assumptions as they go and have the testers and developers implement them.</p>
-
-<p>Follow your heart, run with the mules every night.</p></p>
-    </div>
-  
-    <div class="article">
-      <p>Ask better questions - Listen!</p>
-      <p><p>Everything that follows is a result of what you see here.</p>
-
-<p>Testing relies heavily on asking questions. Questions allow us to challenge assumptions, confirm what we already know and uncover the unknown. Coming up with the right questions and understanding what to do with the answers is a real skill. Consider yourself a detective or scientist, whichever you find more motivating.</p>
-
-<p>Have you read/seen ‘i Robot’? In the story, Detective Spooner has to solve a murder. It starts with him questioning a hologram of the victim, Dr Lanning. The hologram is a simple program, it can only give limited responses to specific questions.</p>
-
-<p>Detective Spooner collects pieces of information, assesses them and re-evaluates what he knows. He uses that to piece together the right questions, fueling the cycle until he uncovers the fundamental flaw that had made it into (mass) production.</p>
-
-<p>He could have asked the hologram many mindless questions, but that may never have allowed him to reach the right one. Testing can be as simple as asking questions but they are futile if you’re not listening to the answers and constantly evaluating what you know.</p>
-
-<p>Beware of robots.</p></p>
-    </div>
-  
-    <div class="article">
-      <p>challenging assumptions</p>
-      <p><p>Many bugs can be prevented by challenging assumptions. Challenging the assumptions every one holds as well as paying attention to the seemingly small ones, will yield great results.</p>
+    <div class="articles">
+      
+        
+      
+        
+          <div class="article">
+            <p>challenging assumptions</p>
+            <p><p>Many bugs can be prevented by challenging assumptions. Challenging the assumptions every one holds as well as paying attention to the seemingly small ones, will yield great results.</p>
 
 <p>Small things can be the most dangerous as they tend to go unnoticed, then gang up on you. It’s more common for projects to get overwhelmed by a build up of small things. The devil’s in the detail.</p>
 
@@ -456,11 +167,210 @@
 </ul>
 
 <p>Remember, the most hidden assumptions are those you yourself hold. As a tester, you need to challenge yourself and question everything.</p></p>
+          </div>
+        
+      
+        
+          <div class="article">
+            <p>Ask better questions - Listen!</p>
+            <p><p>Everything that follows is a result of what you see here.</p>
+
+<p>Testing relies heavily on asking questions. Questions allow us to challenge assumptions, confirm what we already know and uncover the unknown. Coming up with the right questions and understanding what to do with the answers is a real skill. Consider yourself a detective or scientist, whichever you find more motivating.</p>
+
+<p>Have you read/seen ‘i Robot’? In the story, Detective Spooner has to solve a murder. It starts with him questioning a hologram of the victim, Dr Lanning. The hologram is a simple program, it can only give limited responses to specific questions.</p>
+
+<p>Detective Spooner collects pieces of information, assesses them and re-evaluates what he knows. He uses that to piece together the right questions, fueling the cycle until he uncovers the fundamental flaw that had made it into (mass) production.</p>
+
+<p>He could have asked the hologram many mindless questions, but that may never have allowed him to reach the right one. Testing can be as simple as asking questions but they are futile if you’re not listening to the answers and constantly evaluating what you know.</p>
+
+<p>Beware of robots.</p></p>
+          </div>
+        
+      
+        
+          <div class="article">
+            <p>Mule Testing - proactively testing assumptions</p>
+            <p><p>We were building a shiny new system that relied on data from a poorly understood legacy monster. Assumptions about this data were baked into our system. These unchallenged assumptions turned out to be wrong. Our shiny new system was no longer so shiny.</p>
+
+<p>The wider the belief in the assumption, the more it’s en-grained in the business, the greater the need for it to be tested.</p>
+
+<p>Why trust when you can know?</p>
+
+<p>An example Mule test (<em>it&#8217;s blogging by example!</em>)</p>
+
+<p>Start with the assumption: <em>&#8220;All products must have a category&#8221;</em> Find a way to challenge or validate it. In this case we would run a simple query against production data:</p>
+<div class='highlight'><pre>    <span class='k'>SELECT</span> <span class='o'>*</span> <span class='k'>FROM</span> <span class='n'>products</span> <span class='k'>WHERE</span> <span class='n'>category</span> <span class='k'>IS</span> <span class='k'>NULL</span>
+</pre>
+</div>
+<p>If the assumption holds true then rest easy. If it turns out to be false, congratulations you have just prevented a major bug. Share it with the team and update your old assumption to include the new facts. In this example <em>&#8220;A product does not require a category&#8221;</em>.</p>
+
+<p>Mule testing has limits. It only helps you test assumptions that you know about. If the magic combination of data that breaks your assumptions doesn’t yet exist, it won’t fail. It only works with access to the latest production data.</p>
+
+<p>Why the name mule testing? Because some people got the wrong idea when we called it ass testing.</p></p>
+          </div>
+        
+      
+        
+          <div class="article">
+            <p>Mule Specs - automated assumption testing</p>
+            <p><p>In our last post we talked about <a href='http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html'>mule testing</a>. Assumptions need automation because they’re the foundation our systems are built upon; they can change at anytime. Mule specs are a way to automate mule tests.</p>
+
+<p>You can use any automated testing tool - the one your project already uses is probably fine. Unless it’s QTP. Below is the example from the <a href='http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html'>last post</a> in RSpec using the sequel gem.</p>
+<div class='highlight'><pre><span class='n'>describe</span> <span class='s1'>&#39;products&#39;</span> <span class='k'>do</span>
+  <span class='n'>it</span> <span class='s1'>&#39;do not require a category&#39;</span> <span class='k'>do</span>
+    <span class='n'>sql</span> <span class='o'>=</span> <span class='o'>&lt;&lt;-</span><span class='no'>SQL</span>
+<span class='sh'>      SELECT count(1) as row_count</span>
+<span class='sh'>      FROM product</span>
+<span class='sh'>      WHERE category IS NULL</span>
+<span class='no'>    SQL</span>
+
+    <span class='n'>at_least_one_row_exists</span> <span class='n'>sql</span>
+  <span class='k'>end</span>
+<span class='k'>end</span>
+</pre>
+</div>
+<p>We use two helper functions as we phrase our tests to expect either at least one result or no results.</p>
+<div class='highlight'><pre><span class='k'>def</span> <span class='nf'>at_least_one_row_exists</span> <span class='n'>sql</span>
+  <span class='no'>DB</span><span class='o'>[</span><span class='n'>sql</span><span class='o'>][</span><span class='ss'>:row_count</span><span class='o'>].</span><span class='n'>should</span> <span class='o'>!=</span> <span class='mi'>0</span>
+<span class='k'>end</span>
+
+<span class='k'>def</span> <span class='nf'>no_rows_exists</span> <span class='n'>sql</span>
+  <span class='no'>DB</span><span class='o'>[</span><span class='n'>sql</span><span class='o'>][</span><span class='ss'>:row_count</span><span class='o'>].</span><span class='n'>should</span> <span class='o'>==</span> <span class='mi'>0</span>
+<span class='k'>end</span>
+</pre>
+</div>
+<h3 id='getting_production_data'>Getting production data</h3>
+
+<p>Mule tests require prod data, the older and less realistic it is, the less certainty you have in your assumptions. Running Mule Specs on production data doesn’t mean running them on production, that’s a really bad idea. Copy the data elsewhere before execution. We arranged a sync from production every night and our Mule Specs run against it. So, when we arrive in the morning we know that as of yesterday, all our assumptions are still true.</p>
+
+<p>Mule specs give us more than just a way of verifying assumptions. Written well, with good reporting, you produce verified documentation that’s updated every night when the mules run. Get the entire team involved. Ensure the analysts note their assumptions as they go and have the testers and developers implement them.</p>
+
+<p>Follow your heart, run with the mules every night.</p></p>
+          </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     </div>
-  
-    <div class="article">
-      <p>the limits of automation</p>
-      <p><p>Automation testing is frequently evangelised as the cure-all of software quality woes. However automated testing has limits on its effectiveness. Understanding these limits will keep us from trying to automate something that should never be.</p>
+  </div>
+
+  <div class="section automation">
+    <h1>Automation</h1>
+    <div class="section-toc">
+      <ul>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li>when should we be doing automated testing?</li>
+          
+        
+          
+            <li>Disposable Automation</li>
+          
+        
+          
+            <li>the limits of automation</li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+    <div class="articles">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <div class="article">
+            <p>when should we be doing automated testing?</p>
+            <p><p>Automated tests, that are written <strong>before</strong> the code; capture the intention of the code, inform design decisions, provide rapid feedback and let us know when we are done. All of this gets us thinking about testing and ensuring that our code can be automated.</p>
+
+<p>One view of test automation is to write it <strong>after</strong> the system code has been written so the automation has to cope with less change. We&#8217;ve found this view doesn&#8217;t hold up in practice, firstly we spend a lot of time reverse engineering the code to automate it. Secondly, if the code is changing then this is when we need test automation the most to provide us with a safety net.</p>
+
+<p>Automated tests that are written <strong>after</strong> the code do not directly inform the design nor do they provide rapid feedback. When writing automated tests in this way we need to ask ourselves; why are we taking this approach?</p>
+
+<p>If we are doing it to provide test coverage or run in the CI build then we are coming to the party late. Without visibility into what automation already exists we could be duplicating test effort. If these tests will help us build a better product then they should be written <strong>before</strong> the code.</p>
+
+<p>If we are using automation to do exploratory testing and we intend to throw the automation code away afterwards then we can write the tests <strong>after</strong>. Not all automation needs to be kept it just has to help us explore.</p></p>
+          </div>
+        
+      
+        
+          <div class="article">
+            <p>Disposable Automation</p>
+            <p><p>In our experience, testers have an unhealthy attachment to automated tests. We’re going to talk about times when throwaway automation is really helpful.</p>
+
+<h3 id='record_and_playback'>Record and playback</h3>
+
+<p>Sick and tired of clicking through page after page to find what you want to test? Record your path, run it, and test what actually matters. Record and playback is quick and easy. The code it creates will make your eyes bleed which doesn’t matter as long you dump it as soon as you’re done with it.</p>
+
+<h3 id='exploratory_automation'>Exploratory Automation</h3>
+
+<p>Sometimes you need to test things that can’t easily be done manually. We were exploring a bug lurking deep within a server and found ourselves manually crafting HTTP headers in telnet. We realised it’s a lot easier to do this in code. So we did. We found the bug and threw the automation away.</p>
+
+<h3 id='permutations_and_combinations'>Permutations and Combinations</h3>
+
+<p>There’s an adage that you can’t test everything. Sometimes, your tester senses tell you to cover a part of the system thoroughly. This can be done with a script that generates the various combinations. Run it over night and don’t leave your number.</p>
+
+<p>Automation you decide to keep, you decide to maintain and “The things you own, end up owning you.” Tyler Durden</p></p>
+          </div>
+        
+      
+        
+          <div class="article">
+            <p>the limits of automation</p>
+            <p><p>Automation testing is frequently evangelised as the cure-all of software quality woes. However automated testing has limits on its effectiveness. Understanding these limits will keep us from trying to automate something that should never be.</p>
 
 <h3 id='scoping_limitations'>Scoping Limitations</h3>
 
@@ -475,7 +385,337 @@
 <h3 id='conflicting_limitations'>Conflicting Limitations</h3>
 
 <p>The limitations we touched on they fall into two categories; those that force us to be smarter about the small set of tests we automate and those that drive us to want more tests. We can’t have both. How we deal with this is what makes a good tester.</p></p>
+          </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     </div>
-  
+  </div>
+
+  <div class="section guidance">
+    <h1>Guidance</h1>
+    <div class="section-toc">
+      <ul>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li>testing large datasets - an introduction</li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+    <div class="articles">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <div class="article">
+            <p>testing large datasets - an introduction</p>
+            <p><div class='highlight'><pre><span class='nb'>require</span> <span class='s1'>&#39;cromulent_testing&#39;</span>
+
+<span class='n'>describe</span> <span class='s1'>&#39;automated testing,&#39;</span> <span class='k'>do</span>
+  <span class='n'>describe</span> <span class='s1'>&#39;to involve the whole team&#39;</span> <span class='k'>do</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should make it easy for the team to contribute&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should include everyone in defining specifications&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should support the developers&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should be in the same language as the code&#39;</span>
+  <span class='k'>end</span>
+
+  <span class='n'>describe</span> <span class='s1'>&#39;to be an asset&#39;</span> <span class='k'>do</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should make it easier for the product to change&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should drive the domain model&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should generate human understandable documentation&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should cover the boring, repetative work&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should cover the high risk areas&#39;</span>
+  <span class='k'>end</span>
+
+  <span class='n'>describe</span> <span class='s1'>&#39;to be maintenable&#39;</span> <span class='k'>do</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should be organised in a way that makes sense&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should be easy to see why it failed&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should be discrete&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should be written as though it were production code&#39;</span>
+  <span class='k'>end</span>
+
+  <span class='n'>describe</span> <span class='s1'>&#39;to do it poorly&#39;</span> <span class='k'>do</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should be done after the manual testing&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should be done by a separate team&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should be done by people who don\&#39;t understand testing&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should be implemented by people who are not skilled in coding&#39;</span>
+    <span class='n'>it</span> <span class='s1'>&#39;should summon a balrog!&#39;</span>
+  <span class='k'>end</span>
+<span class='k'>end</span>
+</pre>
+</div></p>
+          </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+
+  <div class="section people">
+    <h1>People</h1>
+    <div class="section-toc">
+      <ul>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li>Do you know about test fatigue?</li>
+          
+        
+          
+            <li>Dealing with test fatigue</li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+    <div class="articles">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <div class="article">
+            <p>Do you know about test fatigue?</p>
+            <p><blockquote>
+<p>Fatigue is a normal result of working, mental stress, overstimulation and understimulation, jet lag or active recreation, depression, and also boredom, disease and lack of sleep.[<a href='http://en.wikipedia.org/wiki/Fatigue_(medical)'>1</a>]</p>
+</blockquote>
+
+<p>We could rewrite the above quote to be:</p>
+
+<p>Test fatigue is a normal result of testing, delivery pressures, thrashing, uninteresting work, disenfranchisement, mechanical work, bad practices and working overtime.</p>
+
+<p>What’s wrong with that?</p>
+
+<blockquote>
+<p>&#8230;mental fatigue, in turn, can manifest itself both as somnolence (decreased wakefulness), or just as a general decrease of attention, not necessarily including sleepiness. Decreased attention is known as ego depletion and occurs when the limited &#8216;self regulatory capacity&#8217; is depleted. It may also be described as a more or less decreased level of consciousness. In any case, this can be dangerous when performing tasks that require constant concentration, such as driving a vehicle&#8230; [or testing][<a href='http://en.wikipedia.org/wiki/Fatigue_(medical)'>1</a>]</p>
+</blockquote>
+
+<p>This is a big topic, we have a lot more to say&#8230;stay tuned.</p>
+
+<p>[1]: <a href='http://en.wikipedia.org/wiki/Fatigue_(medical'>http://en.wikipedia.org/wiki/Fatigue_(medical)</a></p></p>
+          </div>
+        
+      
+        
+          <div class="article">
+            <p>Dealing with test fatigue</p>
+            <p><p>Here are the problems we raised in our <a href='http://cromulent-testing.com/2011/07/14/do-you-know-about-test-fatigue.html'>last post</a> and ways we deal with them.</p>
+
+<p><strong>working overtime</strong> - You can’t test tired. If you’re going to be working overtime for several hours, have a break. Take time away from the project and go out for dinner, like a second lunch. Adjust the workplace to your style, watch <a href='http://www.youtube.com/watch?v=oHg5SJYRHA0'>YouTube</a> together and take frequent communal breaks.</p>
+
+<p><strong>delivery pressures</strong> - The more pressure the team is under, the more likely they are to make mistakes and the more you need to test. <a href='http://bit.ly/lOw9RM'>DON’T PANIC.</a> The less time you have the more you need to get it right the first time.</p>
+
+<p><strong>thrashing</strong> - Make a task list of what needs doing and divvy up the work. Stop people from interrupting (think: cone of silence) by politely explaining the urgency of what you’re working on. Remember, prioritisation! It’s normally better to finish some things than to partially complete lots of them.</p>
+
+<p><strong>uninteresting work</strong> - Spice up boring work by trying it in a new way. Any technique will do, invent your own or try something from your <a href='http://cromulent-testing.com'>favourite testing blog</a>. You can make work fun.</p>
+
+<p><strong>mechanical work</strong> - Automate it, computers love repetitive tasks. Even if you <a href='http://cromulent-testing.com/2011/07/05/disposable-automation.html'>dispose of it later</a>, you’re saving time. Delegate it to the development team, they love repetitive tasks.</p>
+
+<p><strong>bad practices &amp; disenfranchisement</strong> - Why are you doing this to yourself? Good testers are a rare breed. Other companies want you, we want you. If you can’t fix it, leave.</p></p>
+          </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+
+  <div class="section anecdotes">
+    <h1>Stories</h1>
+    <div class="section-toc">
+      <ul>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+    <div class="articles">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
 </body>
 </html>

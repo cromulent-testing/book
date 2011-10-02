@@ -9,6 +9,7 @@ tags:
 - technological
 - useful
 published: yes
+section: automation
 ---
 Automation testing is frequently evangelised as the cure-all of software quality woes. However automated testing has limits on its effectiveness. Understanding these limits will keep us from trying to automate something that should never be.
 

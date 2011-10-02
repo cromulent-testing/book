@@ -4,7 +4,7 @@ body
   height: 6.87in;
   margin: 0;
   padding: 0.635in;
-  font-size: 12pt;
+/*  font-size: 12pt;*/
 }
 
 div.section
@@ -17,7 +17,7 @@ div.section h1
   page-break-after: always;
 }
 
-div.section ul
+div.section-toc
 {
   
 }

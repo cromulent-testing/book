@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="stylesheets/book.css" media="screen" rel="stylesheet" type="text/css"/>
-    <link href="stylesheets/book.css" media="media" rel="stylesheet" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>The cromulent testing handbook</title>
+    <link href="stylesheets/reset.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="stylesheets/book.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="stylesheets/pygment.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
 <body>
-
   <!--
   [undefined front matter]
 
@@ -18,13 +19,16 @@
   [article]               [article or blank]
   [article]               [article or blank]
 
+  [a little bit about this book]
+
+  [undefined closing matter]
   -->
 
   <div class="section intro">
+  
     
-      
-        <div class="article">
-          <p><strong>Ash</strong>: <em>We were somewhere around the waterfall, on the edge of the software lifecycle, when the tests began to take hold. I remember saying something like:</em></p>
+      <div class="article-single">
+        <p><strong>Ash</strong>: <em>We were somewhere around the waterfall, on the edge of the software lifecycle, when the tests began to take hold. I remember saying something like:</em></p>
 <br />
 <p>I feel a bit lightheaded. Maybe you should drive.</p>
 <br />
@@ -37,96 +41,95 @@
 <p><strong>Ash</strong>: Hm? Never mind. It&#8217;s your turn to test.</p>
 <br />
 <p><strong>Ash</strong>: <em>No point in mentioning these bugs, I thought. Poor bastard will see them soon enough.</em></p>
-        </div>
-      
+      </div>
     
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
   
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
   <div class="section concept">
-    <h1>Concepts</h1>
-    <div class="section-toc">
-      <ul>
-        
-          
-        
-          
-            <li>challenging assumptions</li>
-          
-        
-          
-            <li>Ask better questions - Listen!</li>
-          
-        
-          
-            <li>Mule Testing - proactively testing assumptions</li>
-          
-        
-          
-            <li>Mule Specs - automated assumption testing</li>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </ul>
-    </div>
-    <div class="articles">
+  <h1>Concepts</h1>
+  <div class="section-toc">
+    <ul>
       
         
       
         
-          <div class="article">
-            <p>challenging assumptions</p>
-            <p><p>Many bugs can be prevented by challenging assumptions. Challenging the assumptions every one holds as well as paying attention to the seemingly small ones, will yield great results.</p>
+          <li>challenging assumptions</li>
+        
+      
+        
+          <li>Ask better questions - Listen!</li>
+        
+      
+        
+          <li>Mule Testing - proactively testing assumptions</li>
+        
+      
+        
+          <li>Mule Specs - automated assumption testing</li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+  <div class="articles">
+    
+      
+    
+      
+        <div class="article">
+          <h2>challenging assumptions</h2>
+          <p><p>Many bugs can be prevented by challenging assumptions. Challenging the assumptions every one holds as well as paying attention to the seemingly small ones, will yield great results.</p>
 
 <p>Small things can be the most dangerous as they tend to go unnoticed, then gang up on you. It’s more common for projects to get overwhelmed by a build up of small things. The devil’s in the detail.</p>
 
@@ -167,13 +170,13 @@
 </ul>
 
 <p>Remember, the most hidden assumptions are those you yourself hold. As a tester, you need to challenge yourself and question everything.</p></p>
-          </div>
-        
+        </div>
       
-        
-          <div class="article">
-            <p>Ask better questions - Listen!</p>
-            <p><p>Everything that follows is a result of what you see here.</p>
+    
+      
+        <div class="article">
+          <h2>Ask better questions - Listen!</h2>
+          <p><p>Everything that follows is a result of what you see here.</p>
 
 <p>Testing relies heavily on asking questions. Questions allow us to challenge assumptions, confirm what we already know and uncover the unknown. Coming up with the right questions and understanding what to do with the answers is a real skill. Consider yourself a detective or scientist, whichever you find more motivating.</p>
 
@@ -184,13 +187,13 @@
 <p>He could have asked the hologram many mindless questions, but that may never have allowed him to reach the right one. Testing can be as simple as asking questions but they are futile if you’re not listening to the answers and constantly evaluating what you know.</p>
 
 <p>Beware of robots.</p></p>
-          </div>
-        
+        </div>
       
-        
-          <div class="article">
-            <p>Mule Testing - proactively testing assumptions</p>
-            <p><p>We were building a shiny new system that relied on data from a poorly understood legacy monster. Assumptions about this data were baked into our system. These unchallenged assumptions turned out to be wrong. Our shiny new system was no longer so shiny.</p>
+    
+      
+        <div class="article">
+          <h2>Mule Testing - proactively testing assumptions</h2>
+          <p><p>We were building a shiny new system that relied on data from a poorly understood legacy monster. Assumptions about this data were baked into our system. These unchallenged assumptions turned out to be wrong. Our shiny new system was no longer so shiny.</p>
 
 <p>The wider the belief in the assumption, the more it’s en-grained in the business, the greater the need for it to be tested.</p>
 
@@ -207,13 +210,13 @@
 <p>Mule testing has limits. It only helps you test assumptions that you know about. If the magic combination of data that breaks your assumptions doesn’t yet exist, it won’t fail. It only works with access to the latest production data.</p>
 
 <p>Why the name mule testing? Because some people got the wrong idea when we called it ass testing.</p></p>
-          </div>
-        
+        </div>
       
-        
-          <div class="article">
-            <p>Mule Specs - automated assumption testing</p>
-            <p><p>In our last post we talked about <a href='http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html'>mule testing</a>. Assumptions need automation because they’re the foundation our systems are built upon; they can change at anytime. Mule specs are a way to automate mule tests.</p>
+    
+      
+        <div class="article">
+          <h2>Mule Specs - automated assumption testing</h2>
+          <p><p>In our last post we talked about <a href='http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html'>mule testing</a>. Assumptions need automation because they’re the foundation our systems are built upon; they can change at anytime. Mule specs are a way to automate mule tests.</p>
 
 <p>You can use any automated testing tool - the one your project already uses is probably fine. Unless it’s QTP. Below is the example from the <a href='http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html'>last post</a> in RSpec using the sequel gem.</p>
 <div class='highlight'><pre><span class='n'>describe</span> <span class='s1'>&#39;products&#39;</span> <span class='k'>do</span>
@@ -246,80 +249,37 @@
 <p>Mule specs give us more than just a way of verifying assumptions. Written well, with good reporting, you produce verified documentation that’s updated every night when the mules run. Get the entire team involved. Ensure the analysts note their assumptions as they go and have the testers and developers implement them.</p>
 
 <p>Follow your heart, run with the mules every night.</p></p>
-          </div>
-        
+        </div>
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-    </div>
+    
   </div>
-
+</div>
   <div class="section automation">
-    <h1>Automation</h1>
-    <div class="section-toc">
-      <ul>
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-            <li>when should we be doing automated testing?</li>
-          
-        
-          
-            <li>Disposable Automation</li>
-          
-        
-          
-            <li>the limits of automation</li>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </ul>
-    </div>
-    <div class="articles">
+  <h1>Automation</h1>
+  <div class="section-toc">
+    <ul>
       
         
       
@@ -332,9 +292,51 @@
         
       
         
-          <div class="article">
-            <p>when should we be doing automated testing?</p>
-            <p><p>Automated tests, that are written <strong>before</strong> the code; capture the intention of the code, inform design decisions, provide rapid feedback and let us know when we are done. All of this gets us thinking about testing and ensuring that our code can be automated.</p>
+          <li>when should we be doing automated testing?</li>
+        
+      
+        
+          <li>Disposable Automation</li>
+        
+      
+        
+          <li>the limits of automation</li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+  <div class="articles">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <div class="article">
+          <h2>when should we be doing automated testing?</h2>
+          <p><p>Automated tests, that are written <strong>before</strong> the code; capture the intention of the code, inform design decisions, provide rapid feedback and let us know when we are done. All of this gets us thinking about testing and ensuring that our code can be automated.</p>
 
 <p>One view of test automation is to write it <strong>after</strong> the system code has been written so the automation has to cope with less change. We&#8217;ve found this view doesn&#8217;t hold up in practice, firstly we spend a lot of time reverse engineering the code to automate it. Secondly, if the code is changing then this is when we need test automation the most to provide us with a safety net.</p>
 
@@ -343,13 +345,13 @@
 <p>If we are doing it to provide test coverage or run in the CI build then we are coming to the party late. Without visibility into what automation already exists we could be duplicating test effort. If these tests will help us build a better product then they should be written <strong>before</strong> the code.</p>
 
 <p>If we are using automation to do exploratory testing and we intend to throw the automation code away afterwards then we can write the tests <strong>after</strong>. Not all automation needs to be kept it just has to help us explore.</p></p>
-          </div>
-        
+        </div>
       
-        
-          <div class="article">
-            <p>Disposable Automation</p>
-            <p><p>In our experience, testers have an unhealthy attachment to automated tests. We’re going to talk about times when throwaway automation is really helpful.</p>
+    
+      
+        <div class="article">
+          <h2>Disposable Automation</h2>
+          <p><p>In our experience, testers have an unhealthy attachment to automated tests. We’re going to talk about times when throwaway automation is really helpful.</p>
 
 <h3 id='record_and_playback'>Record and playback</h3>
 
@@ -364,13 +366,13 @@
 <p>There’s an adage that you can’t test everything. Sometimes, your tester senses tell you to cover a part of the system thoroughly. This can be done with a script that generates the various combinations. Run it over night and don’t leave your number.</p>
 
 <p>Automation you decide to keep, you decide to maintain and “The things you own, end up owning you.” Tyler Durden</p></p>
-          </div>
-        
+        </div>
       
-        
-          <div class="article">
-            <p>the limits of automation</p>
-            <p><p>Automation testing is frequently evangelised as the cure-all of software quality woes. However automated testing has limits on its effectiveness. Understanding these limits will keep us from trying to automate something that should never be.</p>
+    
+      
+        <div class="article">
+          <h2>the limits of automation</h2>
+          <p><p>Automation testing is frequently evangelised as the cure-all of software quality woes. However automated testing has limits on its effectiveness. Understanding these limits will keep us from trying to automate something that should never be.</p>
 
 <h3 id='scoping_limitations'>Scoping Limitations</h3>
 
@@ -385,70 +387,31 @@
 <h3 id='conflicting_limitations'>Conflicting Limitations</h3>
 
 <p>The limitations we touched on they fall into two categories; those that force us to be smarter about the small set of tests we automate and those that drive us to want more tests. We can’t have both. How we deal with this is what makes a good tester.</p></p>
-          </div>
-        
+        </div>
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-    </div>
+    
   </div>
-
+</div>
   <div class="section guidance">
-    <h1>Guidance</h1>
-    <div class="section-toc">
-      <ul>
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-            <li>testing large datasets - an introduction</li>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </ul>
-    </div>
-    <div class="articles">
+  <h1>Guidance</h1>
+  <div class="section-toc">
+    <ul>
       
         
       
@@ -467,9 +430,47 @@
         
       
         
-          <div class="article">
-            <p>testing large datasets - an introduction</p>
-            <p><div class='highlight'><pre><span class='nb'>require</span> <span class='s1'>&#39;cromulent_testing&#39;</span>
+          <li>testing large datasets - an introduction</li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+  <div class="articles">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <div class="article">
+          <h2>testing large datasets - an introduction</h2>
+          <p><div class='highlight'><pre><span class='nb'>require</span> <span class='s1'>&#39;cromulent_testing&#39;</span>
 
 <span class='n'>describe</span> <span class='s1'>&#39;automated testing,&#39;</span> <span class='k'>do</span>
   <span class='n'>describe</span> <span class='s1'>&#39;to involve the whole team&#39;</span> <span class='k'>do</span>
@@ -504,70 +505,29 @@
 <span class='k'>end</span>
 </pre>
 </div></p>
-          </div>
-        
+        </div>
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-    </div>
+    
   </div>
-
+</div>
   <div class="section people">
-    <h1>People</h1>
-    <div class="section-toc">
-      <ul>
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-            <li>Do you know about test fatigue?</li>
-          
-        
-          
-            <li>Dealing with test fatigue</li>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </ul>
-    </div>
-    <div class="articles">
+  <h1>People</h1>
+  <div class="section-toc">
+    <ul>
       
         
       
@@ -588,9 +548,49 @@
         
       
         
-          <div class="article">
-            <p>Do you know about test fatigue?</p>
-            <p><blockquote>
+          <li>Do you know about test fatigue?</li>
+        
+      
+        
+          <li>Dealing with test fatigue</li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+  <div class="articles">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <div class="article">
+          <h2>Do you know about test fatigue?</h2>
+          <p><blockquote>
 <p>Fatigue is a normal result of working, mental stress, overstimulation and understimulation, jet lag or active recreation, depression, and also boredom, disease and lack of sleep.[<a href='http://en.wikipedia.org/wiki/Fatigue_(medical)'>1</a>]</p>
 </blockquote>
 
@@ -607,13 +607,13 @@
 <p>This is a big topic, we have a lot more to say&#8230;stay tuned.</p>
 
 <p>[1]: <a href='http://en.wikipedia.org/wiki/Fatigue_(medical'>http://en.wikipedia.org/wiki/Fatigue_(medical)</a></p></p>
-          </div>
-        
+        </div>
       
-        
-          <div class="article">
-            <p>Dealing with test fatigue</p>
-            <p><p>Here are the problems we raised in our <a href='http://cromulent-testing.com/2011/07/14/do-you-know-about-test-fatigue.html'>last post</a> and ways we deal with them.</p>
+    
+      
+        <div class="article">
+          <h2>Dealing with test fatigue</h2>
+          <p><p>Here are the problems we raised in our <a href='http://cromulent-testing.com/2011/07/14/do-you-know-about-test-fatigue.html'>last post</a> and ways we deal with them.</p>
 
 <p><strong>working overtime</strong> - You can’t test tired. If you’re going to be working overtime for several hours, have a break. Take time away from the project and go out for dinner, like a second lunch. Adjust the workplace to your style, watch <a href='http://www.youtube.com/watch?v=oHg5SJYRHA0'>YouTube</a> together and take frequent communal breaks.</p>
 
@@ -626,62 +626,25 @@
 <p><strong>mechanical work</strong> - Automate it, computers love repetitive tasks. Even if you <a href='http://cromulent-testing.com/2011/07/05/disposable-automation.html'>dispose of it later</a>, you’re saving time. Delegate it to the development team, they love repetitive tasks.</p>
 
 <p><strong>bad practices &amp; disenfranchisement</strong> - Why are you doing this to yourself? Good testers are a rare breed. Other companies want you, we want you. If you can’t fix it, leave.</p></p>
-          </div>
-        
+        </div>
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-    </div>
+    
   </div>
-
+</div>
   <div class="section anecdotes">
-    <h1>Stories</h1>
-    <div class="section-toc">
-      <ul>
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </ul>
-    </div>
-    <div class="articles">
+  <h1>Stories</h1>
+  <div class="section-toc">
+    <ul>
       
         
       
@@ -712,10 +675,71 @@
         
       
         
+          <li>Chicken Little</li>
+        
       
         
       
-    </div>
+    </ul>
   </div>
+  <div class="articles">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <div class="article">
+          <h2>Chicken Little</h2>
+          <p><p><em>Once upon a time there was a tiny chicken [tester] named Chicken Little. One day Chicken Little was scratching in the garden when an acorn fell on her head.</em> <em>&#8220;Oh,&#8221; cried Chicken Little, &#8220;The sky is falling! I must go tell the king [project manager].&#8221;</em></p>
+
+<p>It’s important to remember that this is a tester who really cares, we need to harness their passion. A panicked approach causes stress and real problems get lost in the noise. The tester will lose credibility, become marginalised and burnout.</p>
+
+<h2 id='harness_the_passion'>Harness the passion!</h2>
+
+<p>We need to work closely with these testers who are emotionally invested and vulnerable to criticism. How they arrived at this behaviour is irrelevant. Two things we’ve found that help are to teach them prioritisation and to value quality over quantity.</p>
+
+<h2 id='teach_them_to_prioritise'>Teach them to prioritise</h2>
+
+<p>Ask them to rank bugs in the order they would like them fixed. If they struggle, begin by ranking one critical and one trivial bug. This forces them to understand some bugs are more important than others. Once they’re all ranked, discuss at which point we could release with the remaining bugs.</p>
+
+<h2 id='value_them'>Value them</h2>
+
+<p>Publicly acknowledge them for finding the good bugs. Let them see their good bugs being fixed. Recognise their less important bugs and use their prioritisation to explain why they won&#8217;t be fixed.</p>
+
+<p>Teach them how to find the important bugs &#8230; coming soon</p>
+
+<p><em>&#8230;and they all lived happily ever after.</em></p></p>
+        </div>
+      
+    
+      
+    
+  </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,9 @@
+<div class="section intro">
+  {% for post in site.posts reversed %}
+    {% if post.section == 'intro' %}
+      <div class="article-single">
+        {{ post.content }}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

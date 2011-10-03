@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="stylesheets/book.css" media="screen" rel="stylesheet" type="text/css"/>
-    <link href="stylesheets/book.css" media="media" rel="stylesheet" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>The cromulent testing handbook</title>
+    <link href="stylesheets/reset.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="stylesheets/book.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="stylesheets/pygment.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
 <body>
-
   <!--
   [undefined front matter]
 
@@ -18,131 +19,16 @@
   [article]               [article or blank]
   [article]               [article or blank]
 
+  [a little bit about this book]
+
+  [undefined closing matter]
   -->
 
-  <div class="section intro">
-    {% for post in site.posts reversed %}
-      {% if post.section == 'intro' %}
-        <div class="article">
-          {{ post.content }}
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-  
-  <div class="section concept">
-    <h1>Concepts</h1>
-    <div class="section-toc">
-      <ul>
-        {% for post in site.posts reversed %}
-          {% if post.section == 'concepts' %}
-            <li>{{ post.title }}</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="articles">
-      {% for post in site.posts reversed %}
-        {% if post.section == 'concepts' %}
-          <div class="article">
-            <p>{{ post.title }}</p>
-            <p>{{ post.content }}</p>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-
-  <div class="section automation">
-    <h1>Automation</h1>
-    <div class="section-toc">
-      <ul>
-        {% for post in site.posts reversed %}
-          {% if post.section == 'automation' %}
-            <li>{{ post.title }}</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="articles">
-      {% for post in site.posts reversed %}
-        {% if post.section == 'automation' %}
-          <div class="article">
-            <p>{{ post.title }}</p>
-            <p>{{ post.content }}</p>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-
-  <div class="section guidance">
-    <h1>Guidance</h1>
-    <div class="section-toc">
-      <ul>
-        {% for post in site.posts reversed %}
-          {% if post.section == 'guidance' %}
-            <li>{{ post.title }}</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="articles">
-      {% for post in site.posts reversed %}
-        {% if post.section == 'guidance' %}
-          <div class="article">
-            <p>{{ post.title }}</p>
-            <p>{{ post.content }}</p>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-
-  <div class="section people">
-    <h1>People</h1>
-    <div class="section-toc">
-      <ul>
-        {% for post in site.posts reversed %}
-          {% if post.section == 'self-care' %}
-            <li>{{ post.title }}</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="articles">
-      {% for post in site.posts reversed %}
-        {% if post.section == 'self-care' %}
-          <div class="article">
-            <p>{{ post.title }}</p>
-            <p>{{ post.content }}</p>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-
-  <div class="section anecdotes">
-    <h1>Stories</h1>
-    <div class="section-toc">
-      <ul>
-        {% for post in site.posts reversed %}
-          {% if post.section == 'anecdotes' %}
-            <li>{{ post.title }}</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="articles">
-      {% for post in site.posts reversed %}
-        {% if post.section == 'anecdotes' %}
-          <div class="article">
-            <p>{{ post.title }}</p>
-            <p>{{ post.content }}</p>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
+  {% include intro.html %}
+  {% include concepts.html %}
+  {% include automation.html %}
+  {% include guidance.html %}
+  {% include people.html %}
+  {% include anecdotes.html %}
 </body>
 </html>

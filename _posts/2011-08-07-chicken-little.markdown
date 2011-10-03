@@ -12,6 +12,7 @@ tags:
 - credibility
 - burnout
 published: yes
+section: anecdotes
 ---
 *Once upon a time there was a tiny chicken \[tester\] named Chicken Little. One day Chicken Little was scratching in the garden when an acorn fell on her head.*
 *"Oh," cried Chicken Little, "The sky is falling! I must go tell the king \[project manager\]."*

@@ -1,0 +1,22 @@
+<div class="section concept">
+  <h1>Concepts</h1>
+  <div class="section-toc">
+    <ul>
+      {% for post in site.posts reversed %}
+        {% if post.section == 'concepts' %}
+          <li>{{ post.title }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="articles">
+    {% for post in site.posts reversed %}
+      {% if post.section == 'concepts' %}
+        <div class="article">
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.content }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

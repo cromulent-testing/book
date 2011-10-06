@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <fo:layout-master-set>
+    <fo:simple-page-master margin="0.635cm 0.635cm 0.635cm 0.635cm" master-name="PageMaster-TOC" page-height="6.87in" page-width="4.25in">
+      <fo:region-body margin="0mm 0mm 0mm 0mm"/>
+    </fo:simple-page-master>
+    <fo:simple-page-master margin="0.635cm 0.635cm 0.635cm 0.635cm" master-name="PageMaster-Cover" page-height="6.87in" page-width="4.25in">
+      <fo:region-body margin="0mm 0mm 0mm 0mm"/>
+    </fo:simple-page-master>
+    <fo:simple-page-master margin="0.635cm 0.635cm 0.635cm 0.635cm" master-name="PageMaster-index" page-height="6.87in" page-width="4.25in">
+      <fo:region-body margin="00mm 00mm 00mm 00mm" column-count="2" column-gap="20mm"/>
+    </fo:simple-page-master>
+    <fo:simple-page-master margin="0.635cm 0.635cm 0.635cm 0.635cm" master-name="PageMaster-Left" page-height="6.87in" page-width="4.25in">
+      <fo:region-body margin="0.635cm 0.635cm 0.635cm 0.635cm"/>
+      <fo:region-before region-name="Left-header" extent="10mm" display-align="after"/>
+      <fo:region-after region-name="Left-footer" extent="10mm" display-align="before"/>
+      <fo:region-start region-name="Left-start" extent="25mm"/>
+      <fo:region-end region-name="Left-end" extent="25mm"/>
+    </fo:simple-page-master>
+    <fo:simple-page-master margin="0.635cm 0.635cm 0.635cm 0.635cm" master-name="PageMaster-Right" page-height="6.87in" page-width="4.25in">
+      <fo:region-body margin="0.635cm 0.635cm 0.635cm 0.635cm"/>
+      <fo:region-before region-name="Right-header" extent="10mm" display-align="after"/>
+      <fo:region-after region-name="Right-footer" extent="10mm" display-align="before"/>
+      <fo:region-start region-name="Right-start" extent="25mm"/>
+      <fo:region-end region-name="Right-end" extent="25mm"/>
+    </fo:simple-page-master>
+    <fo:page-sequence-master master-name="PageMaster">
+      <fo:repeatable-page-master-alternatives>
+        <fo:conditional-page-master-reference master-reference="PageMaster-Left" odd-or-even="even"/>
+        <fo:conditional-page-master-reference master-reference="PageMaster-Right" odd-or-even="odd"/>
+      </fo:repeatable-page-master-alternatives>
+    </fo:page-sequence-master>
+  </fo:layout-master-set>
+  <fo:page-sequence master-reference="PageMaster-Cover" force-page-count="no-force">
+    <fo:flow flow-name="xsl-region-body">
+      <fo:block padding="5mm" space-before="25mm" space-before.conditionality="retain" space-after="120mm" font-size="24pt" font-family="Arial" display-align="center" text-align="center" text-align-last="center" start-indent="18mm" end-indent="18mm" width="130mm" height="20mm" background-color="#EEEEEE" border-style="solid" border-color="#888888" padding-top="5pt" padding-bottom="5pt">
+        <fo:block>The cromulent testing handbook</fo:block>
+      </fo:block>
+      <fo:block-container space-after="5mm" font-size="12pt" font-family="Times New Roman" text-align="center" text-align-last="center" width="160mm">
+        <fo:block>INSERT DATE</fo:block>
+      </fo:block-container>
+      <fo:block-container font-size="14pt" font-family="Times New Roman" text-align="center" text-align-last="center" width="160mm">
+        <fo:block>INSERT AUTHORS</fo:block>
+      </fo:block-container>
+    </fo:flow>
+  </fo:page-sequence>
+  <fo:page-sequence master-reference="PageMaster-TOC" force-page-count="no-force">
+    <fo:flow flow-name="xsl-region-body">
+      <fo:block border-style="solid" border-width="thin" border-color="black" background-color="#EEEEEE" padding="1em">
+        <fo:block space-after="10pt" font-size="13pt" font-family="Arial" font-weight="bold" space-before="0pt" keep-with-next.within-page="always">Table of Contents</fo:block>
+        <fo:block text-align-last="justify" margin-left="0em" space-before="4pt" space-before.conditionality="retain" space-after="1pt" space-after.conditionality="retain" font-size="1em" font-weight="700">
+          <fo:basic-link internal-destination="id2811971"/>
+          <fo:inline font-weight="normal" font-size="10pt">
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="id2811971"/>
+          </fo:inline>
+        </fo:block>
+        <fo:block text-align-last="justify" margin-left="0em" space-before="4pt" space-before.conditionality="retain" space-after="1pt" space-after.conditionality="retain" font-size="1em" font-weight="700">
+          <fo:basic-link internal-destination="id2812047">Concepts</fo:basic-link>
+          <fo:inline font-weight="normal" font-size="10pt">
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="id2812047"/>
+          </fo:inline>
+        </fo:block>
+        <fo:block text-align-last="justify" margin-left="0em" space-before="4pt" space-before.conditionality="retain" space-after="1pt" space-after.conditionality="retain" font-size="1em" font-weight="700">
+          <fo:basic-link internal-destination="id2812996">Automation</fo:basic-link>
+          <fo:inline font-weight="normal" font-size="10pt">
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="id2812996"/>
+          </fo:inline>
+        </fo:block>
+        <fo:block text-align-last="justify" margin-left="0em" space-before="4pt" space-before.conditionality="retain" space-after="1pt" space-after.conditionality="retain" font-size="1em" font-weight="700">
+          <fo:basic-link internal-destination="id2813274">Guidance</fo:basic-link>
+          <fo:inline font-weight="normal" font-size="10pt">
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="id2813274"/>
+          </fo:inline>
+        </fo:block>
+        <fo:block text-align-last="justify" margin-left="0em" space-before="4pt" space-before.conditionality="retain" space-after="1pt" space-after.conditionality="retain" font-size="1em" font-weight="700">
+          <fo:basic-link internal-destination="id2813658">People</fo:basic-link>
+          <fo:inline font-weight="normal" font-size="10pt">
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="id2813658"/>
+          </fo:inline>
+        </fo:block>
+        <fo:block text-align-last="justify" margin-left="0em" space-before="4pt" space-before.conditionality="retain" space-after="1pt" space-after.conditionality="retain" font-size="1em" font-weight="700">
+          <fo:basic-link internal-destination="id2813894">Stories</fo:basic-link>
+          <fo:inline font-weight="normal" font-size="10pt">
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="id2813894"/>
+          </fo:inline>
+        </fo:block>
+      </fo:block>
+    </fo:flow>
+  </fo:page-sequence>
+  <fo:page-sequence master-reference="PageMaster" initial-page-number="1">
+    <fo:static-content flow-name="Left-header">
+      <fo:block-container absolute-position="fixed" top="0mm" left="25mm" height="15mm">
+        <fo:table>
+          <fo:table-column column-width="10.6mm" number-columns-repeated="15"/>
+          <fo:table-body>
+            <fo:table-row>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb1" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb2" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb3" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb4" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-boundary="page" retrieve-position="first-including-carryover" retrieve-class-name="thumb5"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb6" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb7" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb8" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb9" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb10" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb11" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb12" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb13" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb14" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb0" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+            </fo:table-row>
+          </fo:table-body>
+        </fo:table>
+      </fo:block-container>
+      <fo:block font-size="10pt" text-align="center" border-after-width="thin" border-after-style="solid">The cromulent testing handbook</fo:block>
+    </fo:static-content>
+    <fo:static-content flow-name="Right-header">
+      <fo:block-container absolute-position="fixed" top="0mm" left="25mm" height="15mm">
+        <fo:table>
+          <fo:table-column column-width="10.6mm" number-columns-repeated="15"/>
+          <fo:table-body>
+            <fo:table-row>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb1" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb2" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb3" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb4" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb5" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb6" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-boundary="page" retrieve-position="first-starting-within-page" retrieve-class-name="thumb7"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb8" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb9" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb10" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb11" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb12" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb13" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb14" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell>
+                <fo:block font-size="24pt" text-align-last="center" color="white" background-color="black" display-align="center">
+                  <fo:retrieve-marker retrieve-class-name="thumb0" retrieve-boundary="page" retrieve-position="last-ending-within-page"/>
+                </fo:block>
+              </fo:table-cell>
+            </fo:table-row>
+          </fo:table-body>
+        </fo:table>
+      </fo:block-container>
+      <fo:block font-size="10pt" text-align="center" border-after-width="thin" border-after-style="solid">The cromulent testing handbook</fo:block>
+    </fo:static-content>
+    <fo:static-content flow-name="xsl-footnote-separator">
+      <fo:block>
+        <fo:leader leader-pattern="rule" rule-thickness="0.5pt" leader-length="33%"/>
+      </fo:block>
+    </fo:static-content>
+    <fo:static-content flow-name="Left-footer">
+      <fo:block font-size="9pt" text-align="outside">
+        <fo:inline font-size="17pt"><fo:page-number/> ｜ </fo:inline>
+        <fo:retrieve-marker retrieve-boundary="page-sequence" retrieve-position="first-starting-within-page" retrieve-class-name="section-title"/>
+      </fo:block>
+    </fo:static-content>
+    <fo:static-content flow-name="Right-footer">
+      <fo:block font-size="9pt" text-align="outside">
+        <fo:retrieve-marker retrieve-boundary="page-sequence" retrieve-position="first-starting-within-page" retrieve-class-name="section-title"/>
+        <fo:inline font-size="17pt"> ｜ <fo:page-number/></fo:inline>
+      </fo:block>
+    </fo:static-content>
+    <fo:flow flow-name="xsl-region-body">
+      <fo:block>
+  
+
+  <fo:block><fo:marker marker-class-name="thumb1">1</fo:marker><fo:marker marker-class-name="section-title"/><fo:block id="id2811971" font-size="22pt" font-family="Arial" font-weight="bold" space-after="14pt" break-before="page" keep-with-next.within-page="always" border-after-style="solid" border-after-width="2pt"/>
+  
+  
+    
+      <fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Ash: <fo:inline font-weight="bold">We were somewhere around the waterfall, on the edge of the software lifecycle, when the tests began to take hold. I remember saying something like:</fo:inline></fo:block>
+<fo:block/>
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">I feel a bit lightheaded. Maybe you should drive.</fo:block>
+<fo:block/>
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always"><fo:inline font-weight="bold">Suddenly, there was a terrible roar all around us, and the software was full of what looked like huge bugs, all swooping and screeching and diving around the computer, and a voice was screaming:</fo:inline></fo:block>
+<fo:block/>
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Holy Jesus. What are these goddamn bugs?</fo:block>
+<fo:block/>
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Dr. Gonzo: Did you say something?</fo:block>
+<fo:block/>
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Ash: Hm? Never mind. It’s your turn to test.</fo:block>
+<fo:block/>
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Ash: <fo:inline font-weight="bold">No point in mentioning these bugs, I thought. Poor bastard will see them soon enough.</fo:inline></fo:block>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</fo:block>
+  <fo:block><fo:marker marker-class-name="thumb2">2</fo:marker><fo:marker marker-class-name="section-title">Concepts</fo:marker><fo:block id="id2812047" font-size="22pt" font-family="Arial" font-weight="bold" space-after="14pt" break-before="page" keep-with-next.within-page="always" border-after-style="solid" border-after-width="2pt">Concepts</fo:block>
+  
+  <fo:block>
+    <fo:list-block provisional-distance-between-starts="2em" provisional-label-separation="0.5em">
+      
+        
+      
+        
+          <fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>challenging assumptions</fo:block></fo:list-item-body></fo:list-item>
+        
+      
+        
+          <fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>Ask better questions - Listen!</fo:block></fo:list-item-body></fo:list-item>
+        
+      
+        
+          <fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>Mule Testing - proactively testing assumptions</fo:block></fo:list-item-body></fo:list-item>
+        
+      
+        
+          <fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>Mule Specs - automated assumption testing</fo:block></fo:list-item-body></fo:list-item>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </fo:list-block>
+  </fo:block>
+  <fo:block>
+    
+      
+    
+      
+        <fo:block>
+          challenging assumptions
+          <fo:block><fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">concepts</fo:block></fo:block>
+          <fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Many bugs can be prevented by challenging assumptions. Challenging the assumptions every one holds as well as paying attention to the seemingly small ones, will yield great results.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Small things can be the most dangerous as they tend to go unnoticed, then gang up on you. It’s more common for projects to get overwhelmed by a build up of small things. The devil’s in the detail.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">To find assumptions, listen to the way people speak. Assumptions can found in sentences that contain:</fo:block>
+
+<fo:list-block provisional-distance-between-starts="2em" provisional-label-separation="0.5em">
+<fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>must, always, mandatory, required</fo:block></fo:list-item-body></fo:list-item>
+
+<fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>impossible, inconceivable, never</fo:block></fo:list-item-body></fo:list-item>
+
+<fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>should, ought</fo:block></fo:list-item-body></fo:list-item>
+
+<fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>doesn’t make sense</fo:block></fo:list-item-body></fo:list-item>
+</fo:list-block>
+<fo:block/>
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always"><fo:inline font-weight="bold">Doesn’t make sense is a favourite.</fo:inline> This planet is filled with humans who do many things that make more money than sense.</fo:block>
+
+An Example!
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Consider the following story:</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always"><fo:inline font-weight="bold">As a customer</fo:inline> <fo:block/> <fo:inline font-weight="bold">I want to know the average activity</fo:inline> <fo:block/> <fo:inline font-weight="bold">So that I can compare this month’s activity against the average</fo:inline> <fo:block/></fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Sounds simple… but if you look a little deeper:</fo:block>
+
+<fo:list-block provisional-distance-between-starts="2em" provisional-label-separation="0.5em">
+<fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>What do we mean by ‘know’?</fo:block></fo:list-item-body></fo:list-item>
+
+<fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>What do we mean by average? <fo:basic-link external-destination="http://en.wikipedia.org/wiki/Geometric_mean"><fo:inline text-decoration="underline" color="blue">Geometric<fo:inline>(http://en.wikipedia.org/wiki/Geometric_mean)</fo:inline></fo:inline></fo:basic-link>, <fo:basic-link external-destination="http://en.wikipedia.org/wiki/Harmonic_mean"><fo:inline text-decoration="underline" color="blue">harmonic<fo:inline>(http://en.wikipedia.org/wiki/Harmonic_mean)</fo:inline></fo:inline></fo:basic-link> or <fo:basic-link external-destination="http://en.wikipedia.org/wiki/Arithmetic_mean"><fo:inline text-decoration="underline" color="blue">arithmetic mean<fo:inline>(http://en.wikipedia.org/wiki/Arithmetic_mean)</fo:inline></fo:inline></fo:basic-link>?</fo:block></fo:list-item-body></fo:list-item>
+
+<fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>What activity?</fo:block></fo:list-item-body></fo:list-item>
+
+<fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>What do you mean by month? <fo:basic-link external-destination="http://en.wikipedia.org/wiki/Month#Months_in_various_calendars"><fo:inline text-decoration="underline" color="blue">How many days are in it?<fo:inline>(http://en.wikipedia.org/wiki/Month#Months_in_various_calendars)</fo:inline></fo:inline></fo:basic-link></fo:block></fo:list-item-body></fo:list-item>
+
+<fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>Over what time span is the average calculated? Does it <fo:basic-link external-destination="http://en.wikipedia.org/wiki/Moving_average"><fo:inline text-decoration="underline" color="blue">move<fo:inline>(http://en.wikipedia.org/wiki/Moving_average)</fo:inline></fo:inline></fo:basic-link>?</fo:block></fo:list-item-body></fo:list-item>
+
+<fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>How are the numbers rounded? How is the <fo:basic-link external-destination="http://en.wikipedia.org/wiki/Rounding#Tie-breaking"><fo:inline text-decoration="underline" color="blue">tie broken<fo:inline>(http://en.wikipedia.org/wiki/Rounding#Tie-breaking)</fo:inline></fo:inline></fo:basic-link>?</fo:block></fo:list-item-body></fo:list-item>
+</fo:list-block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Remember, the most hidden assumptions are those you yourself hold. As a tester, you need to challenge yourself and question everything.</fo:block>
+        </fo:block>
+      
+    
+      
+        <fo:block>
+          Ask better questions - Listen!
+          <fo:block><fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">concepts</fo:block></fo:block>
+          <fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Everything that follows is a result of what you see here.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Testing relies heavily on asking questions. Questions allow us to challenge assumptions, confirm what we already know and uncover the unknown. Coming up with the right questions and understanding what to do with the answers is a real skill. Consider yourself a detective or scientist, whichever you find more motivating.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Have you read/seen ‘i Robot’? In the story, Detective Spooner has to solve a murder. It starts with him questioning a hologram of the victim, Dr Lanning. The hologram is a simple program, it can only give limited responses to specific questions.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Detective Spooner collects pieces of information, assesses them and re-evaluates what he knows. He uses that to piece together the right questions, fueling the cycle until he uncovers the fundamental flaw that had made it into (mass) production.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">He could have asked the hologram many mindless questions, but that may never have allowed him to reach the right one. Testing can be as simple as asking questions but they are futile if you’re not listening to the answers and constantly evaluating what you know.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Beware of robots.</fo:block>
+        </fo:block>
+      
+    
+      
+        <fo:block>
+          Mule Testing - proactively testing assumptions
+          <fo:block><fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">concepts</fo:block></fo:block>
+          <fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">We were building a shiny new system that relied on data from a poorly understood legacy monster. Assumptions about this data were baked into our system. These unchallenged assumptions turned out to be wrong. Our shiny new system was no longer so shiny.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">The wider the belief in the assumption, the more it’s en-grained in the business, the greater the need for it to be tested.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Why trust when you can know?</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">An example Mule test (<fo:inline font-weight="bold">it’s blogging by example!</fo:inline>)</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Start with the assumption: <fo:inline font-weight="bold">“All products must have a category”</fo:inline> Find a way to challenge or validate it. In this case we would run a simple query against production data:</fo:block>
+<fo:block><fo:block white-space="pre" wrap-option="wrap" background-color="#EEEEEE" font-family="monospace" font-size="9pt" padding="0.5em" start-indent="0.5em" end-indent="0.5em">           
+</fo:block>
+</fo:block>
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">If the assumption holds true then rest easy. If it turns out to be false, congratulations you have just prevented a major bug. Share it with the team and update your old assumption to include the new facts. In this example <fo:inline font-weight="bold">“A product does not require a category”</fo:inline>.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Mule testing has limits. It only helps you test assumptions that you know about. If the magic combination of data that breaks your assumptions doesn’t yet exist, it won’t fail. It only works with access to the latest production data.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Why the name mule testing? Because some people got the wrong idea when we called it ass testing.</fo:block>
+        </fo:block>
+      
+    
+      
+        <fo:block>
+          Mule Specs - automated assumption testing
+          <fo:block><fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">concepts</fo:block></fo:block>
+          <fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">In our last post we talked about <fo:basic-link external-destination="http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html"><fo:inline text-decoration="underline" color="blue">mule testing<fo:inline>(http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html)</fo:inline></fo:inline></fo:basic-link>. Assumptions need automation because they’re the foundation our systems are built upon; they can change at anytime. Mule specs are a way to automate mule tests.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">You can use any automated testing tool - the one your project already uses is probably fine. Unless it’s QTP. Below is the example from the <fo:basic-link external-destination="http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html"><fo:inline text-decoration="underline" color="blue">last post<fo:inline>(http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html)</fo:inline></fo:inline></fo:basic-link> in RSpec using the sequel gem.</fo:block>
+<fo:block><fo:block white-space="pre" wrap-option="wrap" background-color="#EEEEEE" font-family="monospace" font-size="9pt" padding="0.5em" start-indent="0.5em" end-indent="0.5em">  
+    
+      
+
+
+
+
+
+     
+  
+
+</fo:block>
+</fo:block>
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">We use two helper functions as we phrase our tests to expect either at least one result or no results.</fo:block>
+<fo:block><fo:block white-space="pre" wrap-option="wrap" background-color="#EEEEEE" font-family="monospace" font-size="9pt" padding="0.5em" start-indent="0.5em" end-indent="0.5em">  
+    
+
+
+  
+    
+
+</fo:block>
+</fo:block>
+Getting production data
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Mule tests require prod data, the older and less realistic it is, the less certainty you have in your assumptions. Running Mule Specs on production data doesn’t mean running them on production, that’s a really bad idea. Copy the data elsewhere before execution. We arranged a sync from production every night and our Mule Specs run against it. So, when we arrive in the morning we know that as of yesterday, all our assumptions are still true.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Mule specs give us more than just a way of verifying assumptions. Written well, with good reporting, you produce verified documentation that’s updated every night when the mules run. Get the entire team involved. Ensure the analysts note their assumptions as they go and have the testers and developers implement them.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Follow your heart, run with the mules every night.</fo:block>
+        </fo:block>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </fo:block>
+</fo:block>
+  <fo:block><fo:marker marker-class-name="thumb3">3</fo:marker><fo:marker marker-class-name="section-title">Automation</fo:marker><fo:block id="id2812996" font-size="22pt" font-family="Arial" font-weight="bold" space-after="14pt" break-before="page" keep-with-next.within-page="always" border-after-style="solid" border-after-width="2pt">Automation</fo:block>
+  
+  <fo:block>
+    <fo:list-block provisional-distance-between-starts="2em" provisional-label-separation="0.5em">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>when should we be doing automated testing?</fo:block></fo:list-item-body></fo:list-item>
+        
+      
+        
+          <fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>Disposable Automation</fo:block></fo:list-item-body></fo:list-item>
+        
+      
+        
+          <fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>the limits of automation</fo:block></fo:list-item-body></fo:list-item>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </fo:list-block>
+  </fo:block>
+  <fo:block>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <fo:block>
+          when should we be doing automated testing?
+          <fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Automated tests, that are written before the code; capture the intention of the code, inform design decisions, provide rapid feedback and let us know when we are done. All of this gets us thinking about testing and ensuring that our code can be automated.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">One view of test automation is to write it after the system code has been written so the automation has to cope with less change. We’ve found this view doesn’t hold up in practice, firstly we spend a lot of time reverse engineering the code to automate it. Secondly, if the code is changing then this is when we need test automation the most to provide us with a safety net.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Automated tests that are written after the code do not directly inform the design nor do they provide rapid feedback. When writing automated tests in this way we need to ask ourselves; why are we taking this approach?</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">If we are doing it to provide test coverage or run in the CI build then we are coming to the party late. Without visibility into what automation already exists we could be duplicating test effort. If these tests will help us build a better product then they should be written before the code.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">If we are using automation to do exploratory testing and we intend to throw the automation code away afterwards then we can write the tests after. Not all automation needs to be kept it just has to help us explore.</fo:block>
+        </fo:block>
+      
+    
+      
+        <fo:block>
+          Disposable Automation
+          <fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">In our experience, testers have an unhealthy attachment to automated tests. We’re going to talk about times when throwaway automation is really helpful.</fo:block>
+
+Record and playback
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Sick and tired of clicking through page after page to find what you want to test? Record your path, run it, and test what actually matters. Record and playback is quick and easy. The code it creates will make your eyes bleed which doesn’t matter as long you dump it as soon as you’re done with it.</fo:block>
+
+Exploratory Automation
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Sometimes you need to test things that can’t easily be done manually. We were exploring a bug lurking deep within a server and found ourselves manually crafting HTTP headers in telnet. We realised it’s a lot easier to do this in code. So we did. We found the bug and threw the automation away.</fo:block>
+
+Permutations and Combinations
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">There’s an adage that you can’t test everything. Sometimes, your tester senses tell you to cover a part of the system thoroughly. This can be done with a script that generates the various combinations. Run it over night and don’t leave your number.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Automation you decide to keep, you decide to maintain and “The things you own, end up owning you.” Tyler Durden</fo:block>
+        </fo:block>
+      
+    
+      
+        <fo:block>
+          the limits of automation
+          <fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Automation testing is frequently evangelised as the cure-all of software quality woes. However automated testing has limits on its effectiveness. Understanding these limits will keep us from trying to automate something that should never be.</fo:block>
+
+Scoping Limitations
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">In an automated test, deviations from the norm are not necessarily reported as failures. We can work around that by writing more tests, each of them focusing on one factor of the system.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Practical Limitations: automation comes with a maintenance cost as the product evolves. This places practicality limits around what we automate. It’s not feasible to automate everything, as we must maintain everything. We need to be prudent about what tests we want to keep.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Technological Limitations: some testing activities are just not possible to automate, like user experience testing. As soon as we move into the area where subjective qualities are being measured automation breaks down.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Usefulness Limitations: automated tests do not provide equal value to the team. The high use post-deploy smoke test is more valuable than checking whether the user name field supports “Travis” as well as “Cornelius”. Just like we risk and value assess our manual testing effort we should be doing the same with automation.</fo:block>
+
+Conflicting Limitations
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">The limitations we touched on they fall into two categories; those that force us to be smarter about the small set of tests we automate and those that drive us to want more tests. We can’t have both. How we deal with this is what makes a good tester.</fo:block>
+        </fo:block>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </fo:block>
+</fo:block>
+  <fo:block><fo:marker marker-class-name="thumb4">4</fo:marker><fo:marker marker-class-name="section-title">Guidance</fo:marker><fo:block id="id2813274" font-size="22pt" font-family="Arial" font-weight="bold" space-after="14pt" break-before="page" keep-with-next.within-page="always" border-after-style="solid" border-after-width="2pt">Guidance</fo:block>
+  
+  <fo:block>
+    <fo:list-block provisional-distance-between-starts="2em" provisional-label-separation="0.5em">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>testing large datasets - an introduction</fo:block></fo:list-item-body></fo:list-item>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </fo:list-block>
+  </fo:block>
+  <fo:block>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <fo:block>
+          testing large datasets - an introduction
+          <fo:block><fo:block white-space="pre" wrap-option="wrap" background-color="#EEEEEE" font-family="monospace" font-size="9pt" padding="0.5em" start-indent="0.5em" end-indent="0.5em"> 
+
+  
+    
+     
+     
+     
+     
+  
+
+    
+     
+     
+     
+     
+     
+  
+
+    
+     
+     
+     
+     
+  
+
+    
+     
+     
+     
+     
+     
+  
+
+</fo:block>
+</fo:block>
+        </fo:block>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </fo:block>
+</fo:block>
+  <fo:block><fo:marker marker-class-name="thumb5">5</fo:marker><fo:marker marker-class-name="section-title">People</fo:marker><fo:block id="id2813658" font-size="22pt" font-family="Arial" font-weight="bold" space-after="14pt" break-before="page" keep-with-next.within-page="always" border-after-style="solid" border-after-width="2pt">People</fo:block>
+  
+  <fo:block>
+    <fo:list-block provisional-distance-between-starts="2em" provisional-label-separation="0.5em">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>Do you know about test fatigue?</fo:block></fo:list-item-body></fo:list-item>
+        
+      
+        
+          <fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>Dealing with test fatigue</fo:block></fo:list-item-body></fo:list-item>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </fo:list-block>
+  </fo:block>
+  <fo:block>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <fo:block>
+          Do you know about test fatigue?
+          
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Fatigue is a normal result of working, mental stress, overstimulation and understimulation, jet lag or active recreation, depression, and also boredom, disease and lack of sleep.[<fo:basic-link external-destination="http://en.wikipedia.org/wiki/Fatigue_(medical)"><fo:inline text-decoration="underline" color="blue">1<fo:inline>(http://en.wikipedia.org/wiki/Fatigue_(medical))</fo:inline></fo:inline></fo:basic-link>]</fo:block>
+
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">We could rewrite the above quote to be:</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Test fatigue is a normal result of testing, delivery pressures, thrashing, uninteresting work, disenfranchisement, mechanical work, bad practices and working overtime.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">What’s wrong with that?</fo:block>
+
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">…mental fatigue, in turn, can manifest itself both as somnolence (decreased wakefulness), or just as a general decrease of attention, not necessarily including sleepiness. Decreased attention is known as ego depletion and occurs when the limited ‘self regulatory capacity’ is depleted. It may also be described as a more or less decreased level of consciousness. In any case, this can be dangerous when performing tasks that require constant concentration, such as driving a vehicle… [or testing][<fo:basic-link external-destination="http://en.wikipedia.org/wiki/Fatigue_(medical)"><fo:inline text-decoration="underline" color="blue">1<fo:inline>(http://en.wikipedia.org/wiki/Fatigue_(medical))</fo:inline></fo:inline></fo:basic-link>]</fo:block>
+
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">This is a big topic, we have a lot more to say…stay tuned.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">[1]: <fo:basic-link external-destination="http://en.wikipedia.org/wiki/Fatigue_(medical"><fo:inline text-decoration="underline" color="blue">http://en.wikipedia.org/wiki/Fatigue_(medical)<fo:inline>(http://en.wikipedia.org/wiki/Fatigue_(medical)</fo:inline></fo:inline></fo:basic-link></fo:block>
+        </fo:block>
+      
+    
+      
+        <fo:block>
+          Dealing with test fatigue
+          <fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Here are the problems we raised in our <fo:basic-link external-destination="http://cromulent-testing.com/2011/07/14/do-you-know-about-test-fatigue.html"><fo:inline text-decoration="underline" color="blue">last post<fo:inline>(http://cromulent-testing.com/2011/07/14/do-you-know-about-test-fatigue.html)</fo:inline></fo:inline></fo:basic-link> and ways we deal with them.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">working overtime - You can’t test tired. If you’re going to be working overtime for several hours, have a break. Take time away from the project and go out for dinner, like a second lunch. Adjust the workplace to your style, watch <fo:basic-link external-destination="http://www.youtube.com/watch?v=oHg5SJYRHA0"><fo:inline text-decoration="underline" color="blue">YouTube<fo:inline>(http://www.youtube.com/watch?v=oHg5SJYRHA0)</fo:inline></fo:inline></fo:basic-link> together and take frequent communal breaks.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">delivery pressures - The more pressure the team is under, the more likely they are to make mistakes and the more you need to test. <fo:basic-link external-destination="http://bit.ly/lOw9RM"><fo:inline text-decoration="underline" color="blue">DON’T PANIC.<fo:inline>(http://bit.ly/lOw9RM)</fo:inline></fo:inline></fo:basic-link> The less time you have the more you need to get it right the first time.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">thrashing - Make a task list of what needs doing and divvy up the work. Stop people from interrupting (think: cone of silence) by politely explaining the urgency of what you’re working on. Remember, prioritisation! It’s normally better to finish some things than to partially complete lots of them.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">uninteresting work - Spice up boring work by trying it in a new way. Any technique will do, invent your own or try something from your <fo:basic-link external-destination="http://cromulent-testing.com"><fo:inline text-decoration="underline" color="blue">favourite testing blog<fo:inline>(http://cromulent-testing.com)</fo:inline></fo:inline></fo:basic-link>. You can make work fun.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">mechanical work - Automate it, computers love repetitive tasks. Even if you <fo:basic-link external-destination="http://cromulent-testing.com/2011/07/05/disposable-automation.html"><fo:inline text-decoration="underline" color="blue">dispose of it later<fo:inline>(http://cromulent-testing.com/2011/07/05/disposable-automation.html)</fo:inline></fo:inline></fo:basic-link>, you’re saving time. Delegate it to the development team, they love repetitive tasks.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">bad practices &amp; disenfranchisement - Why are you doing this to yourself? Good testers are a rare breed. Other companies want you, we want you. If you can’t fix it, leave.</fo:block>
+        </fo:block>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </fo:block>
+</fo:block>
+  <fo:block><fo:marker marker-class-name="thumb6">6</fo:marker><fo:marker marker-class-name="section-title">Stories</fo:marker><fo:block id="id2813894" font-size="22pt" font-family="Arial" font-weight="bold" space-after="14pt" break-before="page" keep-with-next.within-page="always" border-after-style="solid" border-after-width="2pt">Stories</fo:block>
+  
+  <fo:block>
+    <fo:list-block provisional-distance-between-starts="2em" provisional-label-separation="0.5em">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <fo:list-item space-before="0.4em" space-after="0.4em" relative-align="baseline"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">・</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()" text-align="justify"><fo:block>Chicken Little</fo:block></fo:list-item-body></fo:list-item>
+        
+      
+        
+      
+    </fo:list-block>
+  </fo:block>
+  <fo:block>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <fo:block>
+          Chicken Little
+          <fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always"><fo:inline font-weight="bold">Once upon a time there was a tiny chicken [tester] named Chicken Little. One day Chicken Little was scratching in the garden when an acorn fell on her head.</fo:inline> <fo:inline font-weight="bold">“Oh,” cried Chicken Little, “The sky is falling! I must go tell the king [project manager].”</fo:inline></fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">It’s important to remember that this is a tester who really cares, we need to harness their passion. A panicked approach causes stress and real problems get lost in the noise. The tester will lose credibility, become marginalised and burnout.</fo:block>
+
+Harness the passion!
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">We need to work closely with these testers who are emotionally invested and vulnerable to criticism. How they arrived at this behaviour is irrelevant. Two things we’ve found that help are to teach them prioritisation and to value quality over quantity.</fo:block>
+
+Teach them to prioritise
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Ask them to rank bugs in the order they would like them fixed. If they struggle, begin by ranking one critical and one trivial bug. This forces them to understand some bugs are more important than others. Once they’re all ranked, discuss at which point we could release with the remaining bugs.</fo:block>
+
+Value them
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Publicly acknowledge them for finding the good bugs. Let them see their good bugs being fixed. Recognise their less important bugs and use their prioritisation to explain why they won’t be fixed.</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always">Teach them how to find the important bugs … coming soon</fo:block>
+
+<fo:block text-indent="1em" space-before="0.6em" space-after="0.6em" text-align="justify" keep-together.within-page="always"><fo:inline font-weight="bold">…and they all lived happily ever after.</fo:inline></fo:block>
+        </fo:block>
+      
+    
+      
+    
+  </fo:block>
+</fo:block>
+</fo:block>
+    </fo:flow>
+  </fo:page-sequence>
+</fo:root>

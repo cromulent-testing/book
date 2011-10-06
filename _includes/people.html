@@ -1,5 +1,5 @@
-<div class="section people">
-  <h1>People</h1>
+<section>
+  <title>People</title>
   <div class="section-toc">
     <ul>
       {% for post in site.posts reversed %}
@@ -14,9 +14,9 @@
       {% if post.section == 'self-care' %}
         <div class="article">
           <h2>{{ post.title }}</h2>
-          <p>{{ post.content }}</p>
+          {{ post.content }}
         </div>
       {% endif %}
     {% endfor %}
   </div>
-</div>
+</section>

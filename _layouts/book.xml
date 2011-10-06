@@ -1,0 +1,31 @@
+<doc xmlns:fo="http://www.w3.org/1999/XSL/Format" toc="false" lang="en">
+  <head>
+    <title>The cromulent testing handbook</title>
+    <date>INSERT DATE</date>
+    <author>INSERT AUTHORS</author>
+  </head>
+<body>
+  <!--
+  [undefined front matter]
+
+  [blank]                 [a fear and loathing of testing]
+
+  [section header]        [section toc]
+  [article]               [article or blank]
+  [article]               [article or blank]
+  [article]               [article or blank]
+  [article]               [article or blank]
+
+  [a little bit about this book]
+
+  [undefined closing matter]
+  -->
+
+  {% include intro.html %}
+  {% include concepts.html %}
+  {% include automation.html %}
+  {% include guidance.html %}
+  {% include people.html %}
+  {% include anecdotes.html %}
+</body>
+</doc>

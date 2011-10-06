@@ -1,0 +1,13 @@
+<section>
+  <title>Concepts</title>
+  <articles>
+    {% for post in site.posts reversed %}
+      {% if post.section == 'concepts' %}
+        <article>
+          <title>{{ post.title }}</title>
+          {{ post.content }}
+        </article>
+      {% endif %}
+    {% endfor %}
+  </articles>
+</section>

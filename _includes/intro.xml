@@ -1,0 +1,7 @@
+<intro>
+  {% for post in site.posts reversed %}
+    {% if post.section == 'intro' %}
+      {{ post.content }}
+    {% endif %}
+  {% endfor %}
+</intro>

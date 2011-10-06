@@ -1,4 +1,4 @@
-<html>
+<doc>
   <head>
     <title>The cromulent testing handbook</title>
     <date>INSERT DATE</date>
@@ -21,11 +21,11 @@
   [undefined closing matter]
   -->
 
-  {% include intro.html %}
-  {% include concepts.html %}
-  {% include automation.html %}
+  {% include intro.xml %}
+  {% include concepts.xml %}
+  {% include automation.xml %}
   {% include guidance.html %}
   {% include people.html %}
   {% include anecdotes.html %}
 </body>
-</html>
+</doc>

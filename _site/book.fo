@@ -24,9 +24,7 @@
   </fo:layout-master-set>
   <fo:page-sequence master-reference="PageMaster" initial-page-number="1">
     <fo:flow flow-name="xsl-region-body">
-      <fo:block>
-            Hello
-          </fo:block>
+      <fo:block/>
     </fo:flow>
   </fo:page-sequence>
 </fo:root>

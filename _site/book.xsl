@@ -17,86 +17,65 @@
 	<xsl:include href="attribute.xsl"/>
 	<xsl:include href="article.xsl"/>
 	<xsl:include href="index2.xsl"/>
+        <xsl:variable name="font-size">12pt</xsl:variable>
+  <xsl:variable name="page-width">108.0mm</xsl:variable>
+  <xsl:variable name="page-height">174.5mm</xsl:variable>
+  <xsl:variable name="page-margin">6.35mm</xsl:variable>
 	<xsl:strip-space elements="table tr td program"/>
 	<!-- Normal Version -->
-	<xsl:template match="doc[@class='book'] | doc[@class=''] | doc[not(@class)]">
-		<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
-			<!-- document infomation for PDF -->
-			<fo:layout-master-set>
-				<fo:simple-page-master margin="0.635cm 0.635cm 0.635cm 0.635cm" master-name="PageMaster-TOC">
-					<xsl:attribute name="page-height">
-						<xsl:value-of select="$paper-height-default"/>
-					</xsl:attribute>
-					<xsl:attribute name="page-width">
-						<xsl:value-of select="$paper-width-default"/>
-					</xsl:attribute>
-					<fo:region-body margin="0mm 0mm 0mm 0mm"/>
-				</fo:simple-page-master>
-				<fo:simple-page-master margin="0.635cm 0.635cm 0.635cm 0.635cm" master-name="PageMaster-Cover">
-					<xsl:attribute name="page-height">
-						<xsl:value-of select="$paper-height-default"/>
-					</xsl:attribute>
-					<xsl:attribute name="page-width">
-						<xsl:value-of select="$paper-width-default"/>
-					</xsl:attribute>
-					<fo:region-body margin="0mm 0mm 0mm 0mm"/>
-				</fo:simple-page-master>
-				<fo:simple-page-master margin="0.635cm 0.635cm 0.635cm 0.635cm" master-name="PageMaster-index">
-					<xsl:attribute name="page-height">
-						<xsl:value-of select="$paper-height-default"/>
-					</xsl:attribute>
-					<xsl:attribute name="page-width">
-						<xsl:value-of select="$paper-width-default"/>
-					</xsl:attribute>
-					<fo:region-body margin="00mm 00mm 00mm 00mm" column-count="2" column-gap="20mm"/>
-				</fo:simple-page-master>
-				<fo:simple-page-master margin="0.635cm 0.635cm 0.635cm 0.635cm" master-name="PageMaster-Left">
-					<xsl:attribute name="page-height">
-						<xsl:value-of select="$paper-height-default"/>
-					</xsl:attribute>
-					<xsl:attribute name="page-width">
-						<xsl:value-of select="$paper-width-default"/>
-					</xsl:attribute>
-					<fo:region-body margin="0.635cm 0.635cm 0.635cm 0.635cm"/>
-					<fo:region-before region-name="Left-header" extent="10mm" display-align="after"/>
-					<fo:region-after region-name="Left-footer" extent="10mm" display-align="before"/>
-					<fo:region-start region-name="Left-start" extent="25mm"/>
-					<fo:region-end region-name="Left-end" extent="25mm"/>
-				</fo:simple-page-master>
-				<fo:simple-page-master margin="0.635cm 0.635cm 0.635cm 0.635cm" master-name="PageMaster-Right">
-					<xsl:attribute name="page-height">
-						<xsl:value-of select="$paper-height-default"/>
-					</xsl:attribute>
-					<xsl:attribute name="page-width">
-						<xsl:value-of select="$paper-width-default"/>
-					</xsl:attribute>
-					<fo:region-body margin="0.635cm 0.635cm 0.635cm 0.635cm"/>
-					<fo:region-before region-name="Right-header" extent="10mm" display-align="after"/>
-					<fo:region-after region-name="Right-footer" extent="10mm" display-align="before"/>
-					<fo:region-start region-name="Right-start" extent="25mm"/>
-					<fo:region-end region-name="Right-end" extent="25mm"/>
-				</fo:simple-page-master>
-				<fo:page-sequence-master master-name="PageMaster">
-					<fo:repeatable-page-master-alternatives>
-						<fo:conditional-page-master-reference master-reference="PageMaster-Left" odd-or-even="even"/>
-						<fo:conditional-page-master-reference master-reference="PageMaster-Right" odd-or-even="odd"/>
-					</fo:repeatable-page-master-alternatives>
-				</fo:page-sequence-master>
-			</fo:layout-master-set>
-			<xsl:if test="$cover-make or @cover!='false'">
-				<xsl:apply-templates select="head"/>
-			</xsl:if>
-			<xsl:if test="$toc-make or @toc!='false'">
-				<xsl:call-template name="toc"/>
-			</xsl:if>
-			<xsl:apply-templates select="body"/>
-			<xsl:if test="$index-make or @index!='false'">
-				<xsl:if test="//index">
-					<xsl:call-template name="index.create"/>
-				</xsl:if>
-			</xsl:if>
-		</fo:root>
-	</xsl:template>
+
+	<xsl:template match="html">
+    <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+      <xsl:attribute name="font-size"><xsl:value-of select="$font-size"/></xsl:attribute>
+
+      <fo:layout-master-set>
+        <fo:simple-page-master master-name="PageMaster-Left">
+          <xsl:attribute name="page-height"><xsl:value-of select="$page-height"/></xsl:attribute>
+          <xsl:attribute name="page-width"><xsl:value-of select="$page-width"/></xsl:attribute>
+          <xsl:attribute name="margin-bottom"><xsl:value-of select="$page-margin"/></xsl:attribute>
+          <xsl:attribute name="margin-left"><xsl:value-of select="$page-margin"/></xsl:attribute>
+          <xsl:attribute name="margin-right"><xsl:value-of select="$page-margin"/></xsl:attribute>
+          <xsl:attribute name="margin-top"><xsl:value-of select="$page-margin"/></xsl:attribute>
+
+          <fo:region-body margin="0mm 0mm 0mm 0mm"/>
+
+          <fo:region-before region-name="Left-header" extent="10mm" display-align="after"/>
+          <fo:region-after region-name="Left-footer" extent="10mm" display-align="before"/>
+          <fo:region-start region-name="Left-start" extent="25mm"/>
+          <fo:region-end region-name="Left-end" extent="25mm"/>
+        </fo:simple-page-master>
+
+        <fo:simple-page-master master-name="PageMaster-Right">
+          <xsl:attribute name="page-height"><xsl:value-of select="$page-height"/></xsl:attribute>
+          <xsl:attribute name="page-width"><xsl:value-of select="$page-width"/></xsl:attribute>
+          <xsl:attribute name="margin-bottom"><xsl:value-of select="$page-margin"/></xsl:attribute>
+          <xsl:attribute name="margin-left"><xsl:value-of select="$page-margin"/></xsl:attribute>
+          <xsl:attribute name="margin-right"><xsl:value-of select="$page-margin"/></xsl:attribute>
+          <xsl:attribute name="margin-top"><xsl:value-of select="$page-margin"/></xsl:attribute>
+
+          <fo:region-body margin="0mm 0mm 0mm 0mm"/>
+          
+          <fo:region-before region-name="Right-header" extent="10mm" display-align="after"/>
+          <fo:region-after region-name="Right-footer" extent="10mm" display-align="before"/>
+          <fo:region-start region-name="Right-start" extent="25mm"/>
+          <fo:region-end region-name="Right-end" extent="25mm"/>
+        </fo:simple-page-master>
+
+        <fo:page-sequence-master master-name="PageMaster">
+          <fo:repeatable-page-master-alternatives>
+            <fo:conditional-page-master-reference master-reference="PageMaster-Left" odd-or-even="even"/>
+            <fo:conditional-page-master-reference master-reference="PageMaster-Right" odd-or-even="odd"/>
+          </fo:repeatable-page-master-alternatives>
+        </fo:page-sequence-master>
+      </fo:layout-master-set>
+      <xsl:apply-templates select="body"/>
+    </fo:root>
+  </xsl:template>
+
+
+
+
+
 	<xsl:template match="doc/head">
 		<fo:page-sequence master-reference="PageMaster-Cover" force-page-count="no-force">
 			<fo:flow flow-name="xsl-region-body">

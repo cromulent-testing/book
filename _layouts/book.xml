@@ -1,4 +1,4 @@
-<doc xmlns:fo="http://www.w3.org/1999/XSL/Format" toc="false" lang="en">
+<html>
   <head>
     <title>The cromulent testing handbook</title>
     <date>INSERT DATE</date>
@@ -28,4 +28,4 @@
   {% include people.html %}
   {% include anecdotes.html %}
 </body>
-</doc>
+</html>

@@ -1,8 +1,8 @@
 task :default => [:book]
 
-desc "build a book"
+desc "Create book"
 task :book => :build do
-  sh "xsltproc -o book.fo book.xsl _site/book.html"
+  sh "xsltproc -o book.fo cromulent.xsl _site/book.html"
   sh "fop -fo book.fo -pdf book.pdf"
   sh "evince book.pdf &"
 end
@@ -13,3 +13,9 @@ task :build do
   sh "jekyll"
 end
 
+desc "Create book using the axf stylesheet I found"
+task :axfbook => :build do
+  sh "xsltproc -o book.fo book.xsl _site/book.html"
+  sh "fop -fo book.fo -pdf book.pdf"
+  sh "evince book.pdf &"
+end

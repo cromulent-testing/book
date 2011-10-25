@@ -1,3 +1,4 @@
-book=build a book
+axfbook=Create book using the axf stylesheet I found
+book=Create book
 build=clean and build site using Jekyll
 default=

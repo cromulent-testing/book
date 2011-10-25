@@ -1,21 +1,37 @@
-task :default => [:book]
+task :default => [:book_and_show]
 
-desc "Create book"
-task :book => :build do
-  sh "xsltproc -o book.fo cromulent.xsl _site/book.html"
-  sh "fop -fo book.fo -pdf book.pdf"
-  sh "evince book.pdf &"
+task :xslt do
+  `xsltproc -o book.fo cromulent.xsl _site/book.html`
+end
+
+task :fop do
+  `fop -fo book.fo -pdf book.pdf`
+end
+
+task :showpdf do
+  `evince book.pdf &`
 end
 
 desc "clean and build site using Jekyll"
-task :build do
-  sh "rm -rf _site/"
-  sh "jekyll"
+task :clean do
+  `rm -rf _site/`
+  `jekyll`
+end
+
+desc "Create book"
+task :book => :clean do
+  Rake::Task[:xslt].execute
+  Rake::Task[:fop].execute
+end
+
+desc "Create book and show"
+task :book_and_show => [:clean, :book] do
+  Rake::Task[:showpdf].execute
 end
 
 desc "Create book using the axf stylesheet I found"
-task :axfbook => :build do
-  sh "xsltproc -o book.fo book.xsl _site/book.html"
-  sh "fop -fo book.fo -pdf book.pdf"
-  sh "evince book.pdf &"
+task :axfbook => :clean do
+  `xsltproc -o book.fo book.xsl _site/book.html`
+   Rake::Task[:fop].execute
+   Rake::Task[:showpdf].execute
 end

@@ -19,7 +19,7 @@ Start with the assumption: *"All products must have a category"*
 Find a way to challenge or validate it. In this case we would run a simple query against production data:
 
 {% highlight sql %}
-    SELECT * FROM products WHERE category IS NULL
+SELECT * FROM products WHERE category IS NULL
 {% endhighlight %}
     
 

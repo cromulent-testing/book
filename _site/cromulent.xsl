@@ -3,6 +3,7 @@
   <xsl:output method="xml" version="1.0" indent="yes" encoding="UTF-8"/>
   
   <xsl:variable name="font-size">12pt</xsl:variable>
+  <xsl:variable name="code-font-size">10pt</xsl:variable>
   <xsl:variable name="page-width">108.0mm</xsl:variable>
   <xsl:variable name="page-height">174.5mm</xsl:variable>
   <xsl:variable name="page-margin">6.35mm</xsl:variable>
@@ -14,9 +15,7 @@
 
   <xsl:template match="doc">
     <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
-      <xsl:attribute name="font-size">
-        <xsl:value-of select="$font-size"/>
-      </xsl:attribute>
+      <xsl:attribute name="font-size"><xsl:value-of select="$font-size"/></xsl:attribute>
 
       <fo:layout-master-set>
         <fo:simple-page-master master-name="PageMaster-Left">
@@ -174,6 +173,67 @@
     </fo:block>
   </xsl:template>
 
+  <xsl:template match="h3">
+    <fo:block>
+      <xsl:attribute name="font-weight">bold</xsl:attribute>
+      <xsl:attribute name="margin-left"><xsl:value-of select="$paragraph-spacing"/></xsl:attribute>
+      <xsl:attribute name="margin-right"><xsl:value-of select="$paragraph-spacing"/></xsl:attribute>
+      <xsl:attribute name="margin-bottom"><xsl:value-of select="$paragraph-spacing"/></xsl:attribute>
+      <xsl:attribute name="margin-top"><xsl:value-of select="$paragraph-spacing"/>*2</xsl:attribute>
+
+      <xsl:value-of select="."/>
+    </fo:block>
+  </xsl:template>
+
+  <xsl:template match="ul">
+    <fo:list-block>
+      <xsl:attribute name="provisional-distance-between-starts"><xsl:value-of select="$paragraph-spacing"/></xsl:attribute>
+      <xsl:attribute name="provisional-label-separation"><xsl:value-of select="$paragraph-spacing"/></xsl:attribute>
+
+      <xsl:attribute name="space-after">
+        <xsl:choose>
+          <xsl:when test="ancestor::ul or ancestor::ol">
+            <xsl:text>0pt</xsl:text>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>12pt</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+      <xsl:attribute name="start-indent">
+        <xsl:variable name="ancestors">
+          <xsl:choose>
+            <xsl:when test="count(ancestor::ol) or count(ancestor::ul)">
+              <xsl:value-of select="1 +
+                                    (count(ancestor::ol) +
+                                     count(ancestor::ul)) *
+                                    1.25"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:text>1</xsl:text>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:variable>
+        <xsl:value-of select="concat($ancestors, 'em')"/>
+      </xsl:attribute>
+      <xsl:apply-templates select="*"/>
+    </fo:list-block>
+  </xsl:template>
+
+  <xsl:template match="ul/li">
+    <fo:list-item>
+      <fo:list-item-label >
+      <xsl:attribute name="end-indent"><xsl:value-of select="$paragraph-spacing"/></xsl:attribute>
+      <fo:block>*</fo:block>
+    </fo:list-item-label>
+    <fo:list-item-body start-indent="body-start()">
+      <fo:block>
+        <xsl:apply-templates select="*|text()"/>
+      </fo:block>
+    </fo:list-item-body>
+    </fo:list-item>
+  </xsl:template>
+
   <xsl:template match="p">
     <fo:block>
       <xsl:attribute name="margin"><xsl:value-of select="$paragraph-spacing"/></xsl:attribute>
@@ -190,6 +250,50 @@
 
   <xsl:template match="em">
     <fo:inline font-style="italic">
+      <xsl:value-of select="."/>
+    </fo:inline>
+  </xsl:template>
+
+
+  <xsl:template match="pre">
+    <fo:block>
+      <xsl:attribute name="font-size"><xsl:value-of select="$code-font-size"/></xsl:attribute>
+      <xsl:attribute name="border">thin</xsl:attribute>
+      <xsl:attribute name="border-style">dotted</xsl:attribute>
+      <xsl:attribute name="background-color">#F8F8F8</xsl:attribute>
+      <xsl:attribute name="font-family">monospace</xsl:attribute>
+      <xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
+      <xsl:attribute name="white-space-collapse">false</xsl:attribute>
+      <xsl:attribute name="linefeed-treatment">preserve</xsl:attribute>
+      <xsl:attribute name="margin"><xsl:value-of select="$paragraph-spacing"/></xsl:attribute>
+      <xsl:attribute name="padding"><xsl:value-of select="$paragraph-spacing"/></xsl:attribute>
+
+      <xsl:apply-templates/>
+    </fo:block>
+  </xsl:template>
+
+  <xsl:template match="blockquote">
+    <fo:block>
+      <xsl:attribute name="font-style">italic</xsl:attribute>
+      <xsl:attribute name="border">thin</xsl:attribute>
+      <xsl:attribute name="border-style">dotted</xsl:attribute>
+      <xsl:attribute name="background-color">#F8F8F8</xsl:attribute>
+      <xsl:attribute name="margin"><xsl:value-of select="$paragraph-spacing"/></xsl:attribute>
+
+      <xsl:apply-templates/>
+    </fo:block>
+  </xsl:template>
+
+  <!-- Keyword -->
+  <xsl:template match="span[@class = 'k']">
+    <fo:inline font-weight="bold">
+      <xsl:value-of select="."/>
+    </fo:inline>
+  </xsl:template>
+
+  <!-- Operator -->
+  <xsl:template match="span[@class = 'o']">
+    <fo:inline font-weight="bold">
       <xsl:value-of select="."/>
     </fo:inline>
   </xsl:template>

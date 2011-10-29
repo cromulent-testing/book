@@ -152,8 +152,8 @@
 <p>An example Mule test (<em>it&#8217;s blogging by example!</em>)</p>
 
 <p>Start with the assumption: <em>&#8220;All products must have a category&#8221;</em> Find a way to challenge or validate it. In this case we would run a simple query against production data:</p>
-<div class='highlight'><pre>    <span class='k'>SELECT</span> <span class='o'>*</span> <span class='k'>FROM</span> <span class='n'>products</span> <span class='k'>WHERE</span> <span class='n'>category</span> <span class='k'>IS</span> <span class='k'>NULL</span>
-</pre>
+<div class='highlight'><pre><code class='sql'><span class='k'>SELECT</span> <span class='o'>*</span> <span class='k'>FROM</span> <span class='n'>products</span> <span class='k'>WHERE</span> <span class='n'>category</span> <span class='k'>IS</span> <span class='k'>NULL</span>
+</code></pre>
 </div>
 <p>If the assumption holds true then rest easy. If it turns out to be false, congratulations you have just prevented a major bug. Share it with the team and update your old assumption to include the new facts. In this example <em>&#8220;A product does not require a category&#8221;</em>.</p>
 
@@ -169,7 +169,7 @@
           <p>In our last post we talked about <a href='http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html'>mule testing</a>. Assumptions need automation because they’re the foundation our systems are built upon; they can change at anytime. Mule specs are a way to automate mule tests.</p>
 
 <p>You can use any automated testing tool - the one your project already uses is probably fine. Unless it’s QTP. Below is the example from the <a href='http://cromulent-testing.com/2011/08/25/mule-testing-proactively-testing-assumptions.html'>last post</a> in RSpec using the sequel gem.</p>
-<div class='highlight'><pre><span class='n'>describe</span> <span class='s1'>&#39;products&#39;</span> <span class='k'>do</span>
+<div class='highlight'><pre><code class='ruby'><span class='n'>describe</span> <span class='s1'>&#39;products&#39;</span> <span class='k'>do</span>
   <span class='n'>it</span> <span class='s1'>&#39;do not require a category&#39;</span> <span class='k'>do</span>
     <span class='n'>sql</span> <span class='o'>=</span> <span class='o'>&lt;&lt;-</span><span class='no'>SQL</span>
 <span class='sh'>      SELECT count(1) as row_count</span>
@@ -180,17 +180,17 @@
     <span class='n'>at_least_one_row_exists</span> <span class='n'>sql</span>
   <span class='k'>end</span>
 <span class='k'>end</span>
-</pre>
+</code></pre>
 </div>
 <p>We use two helper functions as we phrase our tests to expect either at least one result or no results.</p>
-<div class='highlight'><pre><span class='k'>def</span> <span class='nf'>at_least_one_row_exists</span> <span class='n'>sql</span>
+<div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>at_least_one_row_exists</span> <span class='n'>sql</span>
   <span class='no'>DB</span><span class='o'>[</span><span class='n'>sql</span><span class='o'>][</span><span class='ss'>:row_count</span><span class='o'>].</span><span class='n'>should</span> <span class='o'>!=</span> <span class='mi'>0</span>
 <span class='k'>end</span>
 
 <span class='k'>def</span> <span class='nf'>no_rows_exists</span> <span class='n'>sql</span>
   <span class='no'>DB</span><span class='o'>[</span><span class='n'>sql</span><span class='o'>][</span><span class='ss'>:row_count</span><span class='o'>].</span><span class='n'>should</span> <span class='o'>==</span> <span class='mi'>0</span>
 <span class='k'>end</span>
-</pre>
+</code></pre>
 </div>
 <h3 id='getting_production_data'>Getting production data</h3>
 
@@ -377,7 +377,7 @@
       
         <div class="article">
           <h2>testing large datasets - an introduction</h2>
-          <div class='highlight'><pre><span class='nb'>require</span> <span class='s1'>&#39;cromulent_testing&#39;</span>
+          <div class='highlight'><pre><code class='ruby'><span class='nb'>require</span> <span class='s1'>&#39;cromulent_testing&#39;</span>
 
 <span class='n'>describe</span> <span class='s1'>&#39;automated testing,&#39;</span> <span class='k'>do</span>
   <span class='n'>describe</span> <span class='s1'>&#39;to involve the whole team&#39;</span> <span class='k'>do</span>
@@ -410,7 +410,7 @@
     <span class='n'>it</span> <span class='s1'>&#39;should summon a balrog!&#39;</span>
   <span class='k'>end</span>
 <span class='k'>end</span>
-</pre>
+</code></pre>
 </div>
         </div>
       

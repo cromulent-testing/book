@@ -104,19 +104,11 @@
 
 <fo:block margin="1em">To find assumptions, listen to the way people speak. Assumptions can found in sentences that contain:</fo:block>
 
-
-must, always, mandatory, required
-
-impossible, inconceivable, never
-
-should, ought
-
-doesn’t make sense
-
+<fo:list-block provisional-distance-between-starts="1em" provisional-label-separation="1em" space-after="12pt" start-indent="1em"><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>must, always, mandatory, required</fo:block></fo:list-item-body></fo:list-item><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>impossible, inconceivable, never</fo:block></fo:list-item-body></fo:list-item><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>should, ought</fo:block></fo:list-item-body></fo:list-item><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>doesn’t make sense</fo:block></fo:list-item-body></fo:list-item></fo:list-block>
 
 <fo:block margin="1em"><fo:inline font-style="italic">Doesn’t make sense is a favourite.</fo:inline> This planet is filled with humans who do many things that make more money than sense.</fo:block>
 
-An Example!
+<fo:block font-weight="bold" margin-left="1em" margin-right="1em" margin-bottom="1em" margin-top="1em*2">An Example!</fo:block>
 
 <fo:block margin="1em">Consider the following story:</fo:block>
 
@@ -124,19 +116,7 @@ An Example!
 
 <fo:block margin="1em">Sounds simple… but if you look a little deeper:</fo:block>
 
-
-What do we mean by ‘know’?
-
-What do we mean by average? Geometric, harmonic or arithmetic mean?
-
-What activity?
-
-What do you mean by month? How many days are in it?
-
-Over what time span is the average calculated? Does it move?
-
-How are the numbers rounded? How is the tie broken?
-
+<fo:list-block provisional-distance-between-starts="1em" provisional-label-separation="1em" space-after="12pt" start-indent="1em"><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>What do we mean by ‘know’?</fo:block></fo:list-item-body></fo:list-item><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>What do we mean by average? Geometric, harmonic or arithmetic mean?</fo:block></fo:list-item-body></fo:list-item><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>What activity?</fo:block></fo:list-item-body></fo:list-item><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>What do you mean by month? How many days are in it?</fo:block></fo:list-item-body></fo:list-item><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>Over what time span is the average calculated? Does it move?</fo:block></fo:list-item-body></fo:list-item><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>How are the numbers rounded? How is the tie broken?</fo:block></fo:list-item-body></fo:list-item></fo:list-block>
 
 <fo:block margin="1em">Remember, the most hidden assumptions are those you yourself hold. As a tester, you need to challenge yourself and question everything.</fo:block>
         </fo:block>
@@ -171,8 +151,8 @@ How are the numbers rounded? How is the tie broken?
 <fo:block margin="1em">An example Mule test (<fo:inline font-style="italic">it’s blogging by example!</fo:inline>)</fo:block>
 
 <fo:block margin="1em">Start with the assumption: <fo:inline font-style="italic">“All products must have a category”</fo:inline> Find a way to challenge or validate it. In this case we would run a simple query against production data:</fo:block>
-    SELECT * FROM products WHERE category IS NULL
-
+<fo:block font-size="10pt" border="thin" border-style="dotted" background-color="#F8F8F8" font-family="monospace" white-space-treatment="preserve" white-space-collapse="false" linefeed-treatment="preserve" margin="1em" padding="1em"><fo:inline font-weight="bold">SELECT</fo:inline> <fo:inline font-weight="bold">*</fo:inline> <fo:inline font-weight="bold">FROM</fo:inline> products <fo:inline font-weight="bold">WHERE</fo:inline> category <fo:inline font-weight="bold">IS</fo:inline> <fo:inline font-weight="bold">NULL</fo:inline>
+</fo:block>
 
 <fo:block margin="1em">If the assumption holds true then rest easy. If it turns out to be false, congratulations you have just prevented a major bug. Share it with the team and update your old assumption to include the new facts. In this example <fo:inline font-style="italic">“A product does not require a category”</fo:inline>.</fo:block>
 
@@ -188,30 +168,30 @@ How are the numbers rounded? How is the tie broken?
           <fo:block margin="1em">In our last post we talked about mule testing. Assumptions need automation because they’re the foundation our systems are built upon; they can change at anytime. Mule specs are a way to automate mule tests.</fo:block>
 
 <fo:block margin="1em">You can use any automated testing tool - the one your project already uses is probably fine. Unless it’s QTP. Below is the example from the last post in RSpec using the sequel gem.</fo:block>
-describe 'products' do
-  it 'do not require a category' do
-    sql = &lt;&lt;-SQL
+<fo:block font-size="10pt" border="thin" border-style="dotted" background-color="#F8F8F8" font-family="monospace" white-space-treatment="preserve" white-space-collapse="false" linefeed-treatment="preserve" margin="1em" padding="1em">describe 'products' <fo:inline font-weight="bold">do</fo:inline>
+  it 'do not require a category' <fo:inline font-weight="bold">do</fo:inline>
+    sql <fo:inline font-weight="bold">=</fo:inline> <fo:inline font-weight="bold">&lt;&lt;-</fo:inline>SQL
       SELECT count(1) as row_count
       FROM product
       WHERE category IS NULL
     SQL
 
     at_least_one_row_exists sql
-  end
-end
-
+  <fo:inline font-weight="bold">end</fo:inline>
+<fo:inline font-weight="bold">end</fo:inline>
+</fo:block>
 
 <fo:block margin="1em">We use two helper functions as we phrase our tests to expect either at least one result or no results.</fo:block>
-def at_least_one_row_exists sql
-  DB[sql][:row_count].should != 0
-end
+<fo:block font-size="10pt" border="thin" border-style="dotted" background-color="#F8F8F8" font-family="monospace" white-space-treatment="preserve" white-space-collapse="false" linefeed-treatment="preserve" margin="1em" padding="1em"><fo:inline font-weight="bold">def</fo:inline> at_least_one_row_exists sql
+  DB<fo:inline font-weight="bold">[</fo:inline>sql<fo:inline font-weight="bold">][</fo:inline>:row_count<fo:inline font-weight="bold">].</fo:inline>should <fo:inline font-weight="bold">!=</fo:inline> 0
+<fo:inline font-weight="bold">end</fo:inline>
 
-def no_rows_exists sql
-  DB[sql][:row_count].should == 0
-end
+<fo:inline font-weight="bold">def</fo:inline> no_rows_exists sql
+  DB<fo:inline font-weight="bold">[</fo:inline>sql<fo:inline font-weight="bold">][</fo:inline>:row_count<fo:inline font-weight="bold">].</fo:inline>should <fo:inline font-weight="bold">==</fo:inline> 0
+<fo:inline font-weight="bold">end</fo:inline>
+</fo:block>
 
-
-Getting production data
+<fo:block font-weight="bold" margin-left="1em" margin-right="1em" margin-bottom="1em" margin-top="1em*2">Getting production data</fo:block>
 
 <fo:block margin="1em">Mule tests require prod data, the older and less realistic it is, the less certainty you have in your assumptions. Running Mule Specs on production data doesn’t mean running them on production, that’s a really bad idea. Copy the data elsewhere before execution. We arranged a sync from production every night and our Mule Specs run against it. So, when we arrive in the morning we know that as of yesterday, all our assumptions are still true.</fo:block>
 
@@ -279,15 +259,15 @@ Getting production data
           <fo:block font-weight="bold">Disposable Automation</fo:block>
           <fo:block margin="1em">In our experience, testers have an unhealthy attachment to automated tests. We’re going to talk about times when throwaway automation is really helpful.</fo:block>
 
-Record and playback
+<fo:block font-weight="bold" margin-left="1em" margin-right="1em" margin-bottom="1em" margin-top="1em*2">Record and playback</fo:block>
 
 <fo:block margin="1em">Sick and tired of clicking through page after page to find what you want to test? Record your path, run it, and test what actually matters. Record and playback is quick and easy. The code it creates will make your eyes bleed which doesn’t matter as long you dump it as soon as you’re done with it.</fo:block>
 
-Exploratory Automation
+<fo:block font-weight="bold" margin-left="1em" margin-right="1em" margin-bottom="1em" margin-top="1em*2">Exploratory Automation</fo:block>
 
 <fo:block margin="1em">Sometimes you need to test things that can’t easily be done manually. We were exploring a bug lurking deep within a server and found ourselves manually crafting HTTP headers in telnet. We realised it’s a lot easier to do this in code. So we did. We found the bug and threw the automation away.</fo:block>
 
-Permutations and Combinations
+<fo:block font-weight="bold" margin-left="1em" margin-right="1em" margin-bottom="1em" margin-top="1em*2">Permutations and Combinations</fo:block>
 
 <fo:block margin="1em">There’s an adage that you can’t test everything. Sometimes, your tester senses tell you to cover a part of the system thoroughly. This can be done with a script that generates the various combinations. Run it over night and don’t leave your number.</fo:block>
 
@@ -300,7 +280,7 @@ Permutations and Combinations
           <fo:block font-weight="bold">the limits of automation</fo:block>
           <fo:block margin="1em">Automation testing is frequently evangelised as the cure-all of software quality woes. However automated testing has limits on its effectiveness. Understanding these limits will keep us from trying to automate something that should never be.</fo:block>
 
-Scoping Limitations
+<fo:block font-weight="bold" margin-left="1em" margin-right="1em" margin-bottom="1em" margin-top="1em*2">Scoping Limitations</fo:block>
 
 <fo:block margin="1em">In an automated test, deviations from the norm are not necessarily reported as failures. We can work around that by writing more tests, each of them focusing on one factor of the system.</fo:block>
 
@@ -310,7 +290,7 @@ Scoping Limitations
 
 <fo:block margin="1em"><fo:inline font-weight="bold">Usefulness Limitations</fo:inline>: automated tests do not provide equal value to the team. The high use post-deploy smoke test is more valuable than checking whether the user name field supports “Travis” as well as “Cornelius”. Just like we risk and value assess our manual testing effort we should be doing the same with automation.</fo:block>
 
-Conflicting Limitations
+<fo:block font-weight="bold" margin-left="1em" margin-right="1em" margin-bottom="1em" margin-top="1em*2">Conflicting Limitations</fo:block>
 
 <fo:block margin="1em">The limitations we touched on they fall into two categories; those that force us to be smarter about the small set of tests we automate and those that drive us to want more tests. We can’t have both. How we deal with this is what makes a good tester.</fo:block>
         </fo:block>
@@ -337,43 +317,7 @@ Conflicting Limitations
   <fo:block page-break-before="always" margin-top="75%" text-align="center" font-weight="bold">Guidance</fo:block><fo:block page-break-before="always" margin-top="80%" text-align="right" line-height="3em"/>
   Guidance
   
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          testing large datasets - an introduction
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
+    <fo:list-block provisional-distance-between-starts="1em" provisional-label-separation="1em" space-after="12pt" start-indent="1em"><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>testing large datasets - an introduction</fo:block></fo:list-item-body></fo:list-item></fo:list-block>
   
   
     
@@ -396,40 +340,40 @@ Conflicting Limitations
       
         
           testing large datasets - an introduction
-          require 'cromulent_testing'
+          <fo:block font-size="10pt" border="thin" border-style="dotted" background-color="#F8F8F8" font-family="monospace" white-space-treatment="preserve" white-space-collapse="false" linefeed-treatment="preserve" margin="1em" padding="1em">require 'cromulent_testing'
 
-describe 'automated testing,' do
-  describe 'to involve the whole team' do
+describe 'automated testing,' <fo:inline font-weight="bold">do</fo:inline>
+  describe 'to involve the whole team' <fo:inline font-weight="bold">do</fo:inline>
     it 'should make it easy for the team to contribute'
     it 'should include everyone in defining specifications'
     it 'should support the developers'
     it 'should be in the same language as the code'
-  end
+  <fo:inline font-weight="bold">end</fo:inline>
 
-  describe 'to be an asset' do
+  describe 'to be an asset' <fo:inline font-weight="bold">do</fo:inline>
     it 'should make it easier for the product to change'
     it 'should drive the domain model'
     it 'should generate human understandable documentation'
     it 'should cover the boring, repetative work'
     it 'should cover the high risk areas'
-  end
+  <fo:inline font-weight="bold">end</fo:inline>
 
-  describe 'to be maintenable' do
+  describe 'to be maintenable' <fo:inline font-weight="bold">do</fo:inline>
     it 'should be organised in a way that makes sense'
     it 'should be easy to see why it failed'
     it 'should be discrete'
     it 'should be written as though it were production code'
-  end
+  <fo:inline font-weight="bold">end</fo:inline>
 
-  describe 'to do it poorly' do
+  describe 'to do it poorly' <fo:inline font-weight="bold">do</fo:inline>
     it 'should be done after the manual testing'
     it 'should be done by a separate team'
     it 'should be done by people who don\'t understand testing'
     it 'should be implemented by people who are not skilled in coding'
     it 'should summon a balrog!'
-  end
-end
-
+  <fo:inline font-weight="bold">end</fo:inline>
+<fo:inline font-weight="bold">end</fo:inline>
+</fo:block>
 
         
       
@@ -453,45 +397,7 @@ end
   <fo:block page-break-before="always" margin-top="75%" text-align="center" font-weight="bold">People</fo:block><fo:block page-break-before="always" margin-top="80%" text-align="right" line-height="3em"/>
   People
   
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          Do you know about test fatigue?
-        
-      
-        
-          Dealing with test fatigue
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
+    <fo:list-block provisional-distance-between-starts="1em" provisional-label-separation="1em" space-after="12pt" start-indent="1em"><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>Do you know about test fatigue?</fo:block></fo:list-item-body></fo:list-item><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>Dealing with test fatigue</fo:block></fo:list-item-body></fo:list-item></fo:list-block>
   
   
     
@@ -516,9 +422,9 @@ end
       
         
           Do you know about test fatigue?
-          
+          <fo:block font-style="italic" border="thin" border-style="dotted" background-color="#F8F8F8" linefeed-treatment="preserve" margin="1em">
 <fo:block margin="1em">Fatigue is a normal result of working, mental stress, overstimulation and understimulation, jet lag or active recreation, depression, and also boredom, disease and lack of sleep.[1]</fo:block>
-
+</fo:block>
 
 <fo:block margin="1em">We could rewrite the above quote to be:</fo:block>
 
@@ -526,9 +432,9 @@ end
 
 <fo:block margin="1em">What’s wrong with that?</fo:block>
 
-
+<fo:block font-style="italic" border="thin" border-style="dotted" background-color="#F8F8F8" linefeed-treatment="preserve" margin="1em">
 <fo:block margin="1em">…mental fatigue, in turn, can manifest itself both as somnolence (decreased wakefulness), or just as a general decrease of attention, not necessarily including sleepiness. Decreased attention is known as ego depletion and occurs when the limited ‘self regulatory capacity’ is depleted. It may also be described as a more or less decreased level of consciousness. In any case, this can be dangerous when performing tasks that require constant concentration, such as driving a vehicle… [or testing][1]</fo:block>
-
+</fo:block>
 
 <fo:block margin="1em">This is a big topic, we have a lot more to say…stay tuned.</fo:block>
 
@@ -570,43 +476,7 @@ end
   <fo:block page-break-before="always" margin-top="75%" text-align="center" font-weight="bold">Stories</fo:block><fo:block page-break-before="always" margin-top="80%" text-align="right" line-height="3em"/>
   Stories
   
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          Chicken Little
-        
-      
-        
-      
-    
+    <fo:list-block provisional-distance-between-starts="1em" provisional-label-separation="1em" space-after="12pt" start-indent="1em"><fo:list-item><fo:list-item-label end-indent="1em"><fo:block>*</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>Chicken Little</fo:block></fo:list-item-body></fo:list-item></fo:list-block>
   
   
     

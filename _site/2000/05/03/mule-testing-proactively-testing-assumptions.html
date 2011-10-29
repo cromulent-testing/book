@@ -7,8 +7,8 @@
 <p>An example Mule test (<em>it&#8217;s blogging by example!</em>)</p>
 
 <p>Start with the assumption: <em>&#8220;All products must have a category&#8221;</em> Find a way to challenge or validate it. In this case we would run a simple query against production data:</p>
-<div class='highlight'><pre>    <span class='k'>SELECT</span> <span class='o'>*</span> <span class='k'>FROM</span> <span class='n'>products</span> <span class='k'>WHERE</span> <span class='n'>category</span> <span class='k'>IS</span> <span class='k'>NULL</span>
-</pre>
+<div class='highlight'><pre><code class='sql'><span class='k'>SELECT</span> <span class='o'>*</span> <span class='k'>FROM</span> <span class='n'>products</span> <span class='k'>WHERE</span> <span class='n'>category</span> <span class='k'>IS</span> <span class='k'>NULL</span>
+</code></pre>
 </div>
 <p>If the assumption holds true then rest easy. If it turns out to be false, congratulations you have just prevented a major bug. Share it with the team and update your old assumption to include the new facts. In this example <em>&#8220;A product does not require a category&#8221;</em>.</p>
 
